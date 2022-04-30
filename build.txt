@@ -1,0 +1,5 @@
+displayName = Combinations
+author = Kabaril
+version = 0.1
+homepage = https://github.com/Kabaril/combinations
+buildIgnore = .vs\*, Properties\*, *.csproj, *.sln, obj\*, bin\*, .git\*

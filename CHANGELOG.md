@@ -15,23 +15,27 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.2] - 2022-05-01
+### Fixed
+- Charm of Summoning Whip Speed Bonus
+
 ## [0.1] - 2022-04-30
 ### Added
-Band of Thoughness
-Bone Pile
-Charm of Endurance
-Charm of Rangers
-Charm of Summoning
-Charm of Throwing
-Charm of Warriors
-Charm of Wizards
-Gardening Kit
-Gardening Boots
-Druid Treads
-Overgrown Treads
-Jungle Boots
-Hunters Mark
-Magic Arrow
-Mirror Necklace
-Molten Shield
-Tubular Magiluminescence
+- Band of Thoughness
+- Bone Pile
+- Charm of Endurance
+- Charm of Rangers
+- Charm of Summoning
+- Charm of Throwing
+- Charm of Warriors
+- Charm of Wizards
+- Gardening Kit
+- Gardening Boots
+- Druid Treads
+- Overgrown Treads
+- Jungle Boots
+- Hunters Mark
+- Magic Arrow
+- Mirror Necklace
+- Molten Shield
+- Tubular Magiluminescence

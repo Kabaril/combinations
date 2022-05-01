@@ -42,7 +42,7 @@ namespace Combinations.Items.CharmOfSummoning
             player.pStone = true;
             player.GetDamage(DamageClass.Summon) += 0.05f;
             float multiplier = 1f / 1.1f;
-            player.whipUseTimeMultiplier *= multiplier;
+            player.GetAttackSpeed(DamageClass.SummonMeleeSpeed) *= multiplier;
         }
 
         public static int ItemType() => ModContent.ItemType<CharmOfSummoning>();

@@ -1,7 +1,7 @@
 # Sane Randomizer
 Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
-Currently 18 Accessories are added:
+Currently 19 Accessories are added:
 
 Band of Thoughness
 - crafted from Band of Regeneration and Shackle
@@ -47,3 +47,6 @@ Molten Shield
 
 Tubular Magiluminescence
 - crafted from Magiluminescence and Floating Tube
+
+Charm of true Flight
+- crafted from Magic Arrow and Soaring Insignia

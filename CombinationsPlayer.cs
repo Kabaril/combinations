@@ -10,6 +10,7 @@ using Terraria.ID;
 using Combinations.Buffs;
 using Combinations.Items.MagicArrow;
 using Microsoft.Xna.Framework;
+using System;
 
 namespace Combinations
 {
@@ -202,10 +203,12 @@ namespace Combinations
         {
             if(Main.hardMode)
             {
-                if(Main.rand.Next(5, 1000) <= 10)
+                if(Main.rand.Next(5, Math.Min(1000 - attempt.fishingLevel, 100)) <= 10)
                 {
                     sonar.Text = "Magic Arrow";
                     sonar.Color = Color.Red;
+                    sonar.DurationInFrames = 120;
+                    sonar.Velocity = Vector2.Zero;
                     itemDrop = MagicArrow.ItemType();
                 }
             }

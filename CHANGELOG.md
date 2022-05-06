@@ -15,6 +15,13 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.3] - 2022-05-06
+### Added
+- Charm of true Flight
+
+### Fixed
+- Sonar not showing up correctly when fishing Magic Arrow
+
 ## [0.2] - 2022-05-01
 ### Fixed
 - Charm of Summoning Whip Speed Bonus

@@ -15,6 +15,12 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.4] - 2022-05-08
+### Added
+- Hazardous Enviroment Gear
+- Deadly Enviroment Gear
+- Moon Tablet
+
 ## [0.3] - 2022-05-06
 ### Added
 - Charm of true Flight

@@ -6,6 +6,7 @@ using Combinations.Items.JungleBoots;
 using Combinations.Items.TubularMagiluminescence;
 using Combinations.Items.MirrorNecklace;
 using Combinations.Items.HuntersMark;
+using Combinations.Items.DeadlyEnviromentGear;
 using Terraria.ID;
 using Combinations.Buffs;
 using Combinations.Items.MagicArrow;
@@ -16,6 +17,8 @@ namespace Combinations
 {
     public class CombinationsPlayer : ModPlayer
     {
+        public DateTime lastHurt = DateTime.Now;
+
         private static int[] RecoveryBuffAccessories => new int[] { OvergrownTreads.ItemType(), JungleBoots.ItemType() };
 
         public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
@@ -23,7 +26,7 @@ namespace Combinations
             if(Helpers.HasPlayerAccessoryEquipped<TubularMagiluminescence>(Player)) {
                 drawInfo.drawFloatingTube = false;
             }
-            
+            ;
             base.ModifyDrawInfo(ref drawInfo);
         }
 
@@ -199,6 +202,30 @@ namespace Combinations
             base.PreUpdate();
         }
 
+        public override void PreUpdateBuffs()
+        {
+            if (Helpers.HasPlayerAccessoryEquipped<DeadlyEnviromentGear>(Player))
+            {
+                if (lastHurt < DateTime.Now.Subtract(TimeSpan.FromSeconds(5d)))
+                {
+                    Lighting.AddLight((int)(Player.Center.X / 16f), (int)(Player.Center.Y / 16f), 0.1f, 0.2f, 0.45f);
+                    Player.iceBarrier = true;
+                    Player.endurance += 0.25f;
+                    Player.iceBarrierFrameCounter++;
+                    if (Player.iceBarrierFrameCounter > 2)
+                    {
+                        Player.iceBarrierFrameCounter = 0;
+                        Player.iceBarrierFrame++;
+                        if (Player.iceBarrierFrame >= 12)
+                        {
+                            Player.iceBarrierFrame = 0;
+                        }
+                    }
+                }
+            }
+            base.PreUpdateBuffs();
+        }
+
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
         {
             if(Main.hardMode)
@@ -213,6 +240,12 @@ namespace Combinations
                 }
             }
             base.CatchFish(attempt, ref itemDrop, ref npcSpawn, ref sonar, ref sonarPosition);
+        }
+
+        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        {
+            lastHurt = DateTime.Now;
+            base.Hurt(pvp, quiet, damage, hitDirection, crit);
         }
     }
 }

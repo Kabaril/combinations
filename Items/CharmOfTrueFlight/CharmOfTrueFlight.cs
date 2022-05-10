@@ -31,6 +31,7 @@ namespace Combinations.Items.CharmOfTrueFlight
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient<MagicArrow.MagicArrow>();
             recipe.AddIngredient(ItemID.EmpressFlightBooster);
+            recipe.AddIngredient(ItemID.RainbowWings);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.AddCondition(Terraria.Localization.NetworkText.FromLiteral("Master Mode only"), (r) => Main.masterMode);
             recipe.Register();

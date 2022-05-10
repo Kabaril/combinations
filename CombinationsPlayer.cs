@@ -26,7 +26,6 @@ namespace Combinations
             if(Helpers.HasPlayerAccessoryEquipped<TubularMagiluminescence>(Player)) {
                 drawInfo.drawFloatingTube = false;
             }
-            ;
             base.ModifyDrawInfo(ref drawInfo);
         }
 

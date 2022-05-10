@@ -53,11 +53,10 @@ namespace Combinations.Items.DeadlyEnviromentGear
             player.honeyCombItem = Item;
             player.buffImmune[BuffID.Bleeding] = true;
             player.buffImmune[BuffID.Poisoned] = true;
-            if (!hideVisual)
+            if (!hideVisual && player.armor[0].type == ItemID.None)
             {
                 //prevents hair from being drawn
                 player.faceHead = 1;
-                player.head = 1;
                 //this draws natures gift flower, but is just overlayed
             }
             if (!player.wet) {

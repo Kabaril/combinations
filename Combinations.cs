@@ -1,3 +1,4 @@
+using Combinations.Items.AgletOfTheWind;
 using Combinations.Items.MoonTablet;
 using Terraria;
 using Terraria.ID;
@@ -20,6 +21,11 @@ namespace Combinations
             recipe.AddIngredient(ItemID.SunStone);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
+            Recipe recipe2 = CreateRecipe(ItemID.LightningBoots);
+            recipe2.AddIngredient(ItemID.SpectreBoots);
+            recipe2.AddIngredient<AgletOfTheWind>();
+            recipe2.AddTile(TileID.TinkerersWorkbench);
+            recipe2.Register();
             base.AddRecipes();
         }
 

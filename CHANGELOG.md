@@ -15,6 +15,17 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.5] - 2022-05-10
+### Added
+- Aglet Of The Wind
+
+### Fixed
+- Bug that caused Deadly Enviroment Gear and Hazardous Enviroment Gear to disable set bonuses
+- Rendering of Deadly Enviroment Gear and Hazardous Enviroment Gear
+
+### Changed
+- Charm of True Flight now requires Empress Wings to craft
+
 ## [0.4] - 2022-05-08
 ### Added
 - Hazardous Enviroment Gear

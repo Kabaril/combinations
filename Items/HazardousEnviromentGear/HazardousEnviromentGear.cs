@@ -48,11 +48,10 @@ namespace Combinations.Items.HazardousEnviromentGear
             player.iceSkate = true;
             player.noFallDmg = true;
             player.fireWalk = true;
-            if (!hideVisual)
+            if (!hideVisual && player.armor[0].type == ItemID.None)
             {
                 //prevents hair from being drawn
                 player.faceHead = 1;
-                player.head = 1;
                 //this draws natures gift flower, but is just overlayed
             }
             player.honeyCombItem = Item;

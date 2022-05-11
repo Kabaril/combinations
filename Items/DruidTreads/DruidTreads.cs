@@ -36,6 +36,12 @@ namespace Combinations.Items.DruidTreads
             recipe.AddIngredient(ItemID.GoldBar, 10);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
+            Recipe recipe2 = CreateRecipe();
+            recipe2.AddIngredient<GardeningBoots.GardeningBoots>();
+            recipe2.AddIngredient(ItemID.StaffofRegrowth);
+            recipe2.AddIngredient(ItemID.PlatinumBar, 10);
+            recipe2.AddTile(TileID.TinkerersWorkbench);
+            recipe2.Register();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

@@ -5,4 +5,4 @@ Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
 You can read more about these Accessories on the wiki: https://github.com/Kabaril/combinations/wiki
 
-Currently 23 Accessories are added
+Currently 24 Accessories are added

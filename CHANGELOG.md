@@ -15,6 +15,14 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.6] - 2022-05-11
+### Added
+- Hell Boots
+
+### Fixed
+- Druid Treads can now be crafted with Platinum Bars as well
+
+
 ## [0.5] - 2022-05-10
 ### Added
 - Aglet Of The Wind

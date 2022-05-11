@@ -1,6 +1,6 @@
 Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
-Currently 23 Accessories are added
+Currently 24 Accessories are added
 
 You can read more about these Accessories on the wiki: https://github.com/Kabaril/combinations/wiki
 

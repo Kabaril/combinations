@@ -12,6 +12,7 @@ namespace Combinations.Items.BandOfToughness
         {
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "'How tough are you?'");
+            DisplayName.SetDefault("Band of Toughness");
         }
 
         public override void SetDefaults()
@@ -40,7 +41,7 @@ namespace Combinations.Items.BandOfToughness
         public override List<int> IncompatibleAccessories() =>
             new List<int>()
             {
-                        ItemType(),
+                ItemType(),
             };
     }
 }

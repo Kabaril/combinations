@@ -14,6 +14,7 @@ namespace Combinations.Items.CharmOfWizards
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "Increases maximum mana by 20\n" +
                 "5% increased magic damage");
+            DisplayName.SetDefault("Charm of Wizards");
         }
 
         public override void SetDefaults()

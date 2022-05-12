@@ -12,6 +12,7 @@ namespace Combinations.Items.CharmOfTrueFlight
             Tooltip.SetDefault("Grants infinite flight\n" +
             "Increases flight and jump mobility\n" +
             "'Flying is like breathing'");
+            DisplayName.SetDefault("Charm of True Flight");
         }
 
         public override void SetDefaults()

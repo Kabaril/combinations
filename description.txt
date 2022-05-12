@@ -1,6 +1,23 @@
 Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
-Currently 24 Accessories are added
+Currently 25 Accessories are added
+
+Some of the Items added:
+
+Bone Pile
+Charm of Rangers
+Charm of Summoning
+Charm of Throwing
+Charm of Warriors
+Charm of Wizards
+Jungle Boots
+Hunters Mark
+Magic Arrow
+Mirror Necklace
+Molten Shield
+Charm of True Flight
+Deadly Enviroment Gear
+Hell Boots
 
 You can read more about these Accessories on the wiki: https://github.com/Kabaril/combinations/wiki
 

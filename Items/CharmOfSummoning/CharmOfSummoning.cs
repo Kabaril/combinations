@@ -14,6 +14,7 @@ namespace Combinations.Items.CharmOfSummoning
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "5% increased summon damage\n" +
                 "10% increased whip speed");
+            DisplayName.SetDefault("Charm of Summoning");
         }
 
         public override void SetDefaults()

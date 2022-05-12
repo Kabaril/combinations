@@ -16,6 +16,7 @@ namespace Combinations.Items.CharmOfThrowing
                 "8% increased throwing critical strike chance\n" +
                 "15% increased throwing velocity\n" +
                 "'The path ahead is unclear'");
+            DisplayName.SetDefault("Charm of Throwing");
         }
 
         public override void SetDefaults()

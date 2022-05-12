@@ -13,6 +13,7 @@ namespace Combinations.Items.CharmOfWarriors
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "5% increased melee damage");
+            DisplayName.SetDefault("Charm of Warriors");
         }
 
         public override void SetDefaults()

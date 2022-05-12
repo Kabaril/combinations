@@ -15,6 +15,13 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.7] - 2022-05-12
+### Added
+- Builders Pack
+
+### Fixed
+- Capitalization of 'of' in Items
+
 ## [0.6] - 2022-05-11
 ### Added
 - Hell Boots

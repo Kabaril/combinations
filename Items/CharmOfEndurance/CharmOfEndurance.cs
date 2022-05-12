@@ -12,6 +12,7 @@ namespace Combinations.Items.CharmOfEndurance
         {
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "Reduces the cooldown of healing potions by 25%");
+            DisplayName.SetDefault("Charm of Endurance");
         }
 
         public override void SetDefaults()

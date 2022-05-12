@@ -14,6 +14,7 @@ namespace Combinations.Items.CharmOfRangers
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "5% increased ranged damage\n" +
                 "5% ranged critical strike chance");
+            DisplayName.SetDefault("Charm of Rangers");
         }
 
         public override void SetDefaults()

@@ -10,6 +10,7 @@ namespace Combinations.Items.AgletOfTheWind
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("12% increased movement speed");
+            DisplayName.SetDefault("Aglet of the Wind");
         }
 
         public override void SetDefaults()

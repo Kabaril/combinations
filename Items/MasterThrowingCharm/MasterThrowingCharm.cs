@@ -3,10 +3,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Combinations.Items.CharmOfThrowing
+namespace Combinations.Items.MasterThrowingCharm
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class CharmOfThrowing : CombinationsBaseModItem
+    public class MasterThrowingCharm : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -15,8 +15,7 @@ namespace Combinations.Items.CharmOfThrowing
                 "8% increased throwing damage\n" +
                 "8% increased throwing critical strike chance\n" +
                 "20% increased throwing velocity\n" +
-                "'The path ahead is unclear'");
-            DisplayName.SetDefault("Charm of Throwing");
+                "Throws two projectiles at a time");
         }
 
         public override void SetDefaults()
@@ -25,7 +24,7 @@ namespace Combinations.Items.CharmOfThrowing
             Item.width = 22;
             Item.height = 22;
             Item.value = Item.sellPrice(0, 5);
-            Item.rare = ItemRarityID.LightPurple;
+            Item.rare = ItemRarityID.Yellow;
             Item.stack = 1;
             Item.lifeRegen = 2;
             Item.defense = 1;
@@ -34,8 +33,8 @@ namespace Combinations.Items.CharmOfThrowing
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient<CharmOfEndurance.CharmOfEndurance>();
-            recipe.AddIngredient(ItemID.Amber, 3);
+            recipe.AddIngredient(ItemID.BeetleHusk, 3);
+            recipe.AddIngredient<CharmOfThrowing.CharmOfThrowing>();
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.Register();
         }
@@ -46,16 +45,22 @@ namespace Combinations.Items.CharmOfThrowing
             player.GetCritChance(DamageClass.Throwing) += 8;
         }
 
-        public static int ItemType() => ModContent.ItemType<CharmOfThrowing>();
+        public static int ItemType() => ModContent.ItemType<MasterThrowingCharm>();
 
-        public override List<int> IncompatibleAccessories() => new List<int>()
-        {
-            ItemType(),
-            CharmOfEndurance.CharmOfEndurance.ItemType(),
-            CharmOfRangers.CharmOfRangers.ItemType(),
-            CharmOfSummoning.CharmOfSummoning.ItemType(),
-            CharmOfWarriors.CharmOfWarriors.ItemType(),
-            CharmOfWizards.CharmOfWizards.ItemType(),
-        };
+        public override List<int> IncompatibleAccessories() =>
+            new List<int>()
+            {
+                ItemType(),
+                CharmOfEndurance.CharmOfEndurance.ItemType(),
+                CharmOfRangers.CharmOfRangers.ItemType(),
+                CharmOfThrowing.CharmOfThrowing.ItemType(),
+                CharmOfWarriors.CharmOfWarriors.ItemType(),
+                CharmOfWizards.CharmOfWizards.ItemType(),
+                CharmOfSummoning.CharmOfSummoning.ItemType(),
+                VortexCharm.VortexCharm.ItemType(),
+                SolarCharm.SolarCharm.ItemType(),
+                NebulaCharm.NebulaCharm.ItemType(),
+                StardustCharm.StardustCharm.ItemType()
+            };
     }
 }

@@ -1,6 +1,6 @@
 Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
-Currently 25 Accessories are added
+Currently 30 Accessories are added
 
 Some of the Items added:
 

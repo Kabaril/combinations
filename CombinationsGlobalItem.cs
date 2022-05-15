@@ -2,11 +2,15 @@
 using Terraria;
 using Terraria.ModLoader;
 using Combinations.Items.CharmOfThrowing;
+using Combinations.Items.MasterThrowingCharm;
+using System;
 
 namespace Combinations
 {
     public class CombinationsGlobalItem : GlobalItem
     {
+        private static int[] ThrowingBuffAccessories => new int[] { CharmOfThrowing.ItemType(), MasterThrowingCharm.ItemType() };
+
         public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
         {
             if(Helpers.CannotBeWornTogether(equippedItem, incomingItem))
@@ -20,16 +24,16 @@ namespace Combinations
         {
             if(item.DamageType == DamageClass.Throwing || (item.DamageType == DamageClass.Ranged && item.consumable) || (item.DamageType == DamageClass.Melee && item.consumable))
             {
-                if(Helpers.HasPlayerAccessoryEquipped<CharmOfThrowing>(player))
+                if(Helpers.HasPlayerOneOfAccessoryEquipped(player, ThrowingBuffAccessories))
                 {
-                    velocity.X *= 1.1f;
-                    velocity.Y *= 1.1f;
-                    damage = (int)(damage * 1.08f);
+                    velocity.X *= 1.2f;
+                    velocity.Y *= 1.2f;
+                    damage = (int)Math.Ceiling(damage * 1.08d);
 
                     if(item.DamageType != DamageClass.Throwing)
                     {
                         //just convert crit to damage in this case
-                        damage = (int)(damage * 1.08f);
+                        damage = (int)Math.Ceiling(damage * 1.08d);
                     }
                 }
             }

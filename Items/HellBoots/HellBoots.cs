@@ -54,7 +54,7 @@ namespace Combinations.Items.HellBoots
                 player.statDefense += 4;
                 player.GetAttackSpeed(DamageClass.Generic) += 0.1f;
                 player.GetDamage(DamageClass.Generic) += 0.1f;
-                player.GetCritChance(DamageClass.Generic) += 0.2f;
+                player.GetCritChance(DamageClass.Generic) += 2;
             }
             if (!hideVisual && player.whoAmI == Main.myPlayer)
             {

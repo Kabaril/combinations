@@ -1,23 +1,31 @@
-﻿using Terraria.DataStructures;
-using Terraria.ModLoader;
+﻿using System;
+using System.Linq;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
+using Terraria.DataStructures;
+using Terraria.ModLoader;
+using Combinations.Buffs;
+using Combinations.Items.MagicArrow;
 using Combinations.Items.OvergrownTreads;
 using Combinations.Items.JungleBoots;
 using Combinations.Items.TubularMagiluminescence;
 using Combinations.Items.MirrorNecklace;
 using Combinations.Items.HuntersMark;
 using Combinations.Items.DeadlyEnviromentGear;
-using Terraria.ID;
-using Combinations.Buffs;
-using Combinations.Items.MagicArrow;
-using Microsoft.Xna.Framework;
-using System;
+using Combinations.Items.SolarCharm;
+using Combinations.Items.VortexCharm;
+using Combinations.Items.NebulaCharm;
+using Combinations.Items.StardustCharm;
+using System.Collections.Generic;
 
 namespace Combinations
 {
     public class CombinationsPlayer : ModPlayer
     {
         public DateTime lastHurt = DateTime.Now;
+
+        public int NebulaCharmCharge = 0;
 
         private static int[] RecoveryBuffAccessories => new int[] { OvergrownTreads.ItemType(), JungleBoots.ItemType() };
 
@@ -47,6 +55,59 @@ namespace Combinations
             base.GetHealMana(item, quickHeal, ref healValue);
         }
 
+        public override void ModifyWeaponDamage(Item item, ref StatModifier damage)
+        {
+            if(NebulaCharmCharge > 100 && item.DamageType == DamageClass.Magic || item.DamageType == DamageClass.MagicSummonHybrid)
+            {
+                StatModifier damage_mod = GetNebulaChargeDamage(NebulaCharmCharge);
+                damage.Flat += damage_mod.Flat;
+                damage += (damage_mod.Additive - 1f);
+            }
+            base.ModifyWeaponDamage(item, ref damage);
+        }
+
+        public override void OnConsumeMana(Item item, int manaConsumed)
+        {
+            if(NebulaCharmCharge > 0)
+            {
+                NebulaCharmCharge -= (50 + (manaConsumed * 15));
+                if(NebulaCharmCharge < 0)
+                {
+                    NebulaCharmCharge = 0;
+                }
+            }
+            base.OnConsumeMana(item, manaConsumed);
+        }
+
+        private static StatModifier GetNebulaChargeDamage(int charge)
+        {
+            StatModifier modifier = StatModifier.Default;
+            modifier.Flat = Math.Min(charge / 75f, 20f);
+            //not very low charge
+            if (charge > 1500)
+            {
+                if(charge > 18000)
+                {
+                    modifier += 0.2f;
+                } else
+                {
+                    modifier += (charge / 90000f);
+                }
+            }
+            return modifier;
+        }
+
+        public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
+        {
+            // True Melee Attacks
+            if (Helpers.HasPlayerAccessoryEquipped<SolarCharm>(Player))
+            {
+                // 100% bonus
+                damage *= 2;
+            }
+            base.ModifyHitNPC(item, target, ref damage, ref knockback, ref crit);
+        }
+
         public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             //Any whip can apply MirrorNecklaceBuff even if it does not have a tag itself
@@ -56,11 +117,56 @@ namespace Combinations
             }
             if(!proj.npcProj && !proj.trap && (proj.minion || ProjectileID.Sets.MinionShot[proj.type]))
             {
-                for (int j = 0; j < 5; j++)
+                if (Helpers.HasPlayerAccessoryEquipped<StardustCharm>(Player))
                 {
-                    if (target.buffTime[j] >= 1 && target.HasBuff<MirrorNecklaceBuff>())
+                    target.AddBuff(StardustCharmBuff._type_unsafe, 240);
+                }
+                if(target.HasBuff<MirrorNecklaceBuff>())
+                {
+                    damage += 10;
+                }
+            }
+            if(!proj.npcProj && !proj.trap && !proj.minion && !ProjectileID.Sets.MinionShot[proj.type])
+            {
+                //reverse Tag from StardustCharm
+                if (target.HasBuff<StardustCharmBuff>())
+                {
+                    damage += 20;
+                }
+                //Solar Charm damage bonus
+                if (proj.DamageType == DamageClass.Melee && !ProjectileID.Sets.IsAWhip[proj.type] && Helpers.HasPlayerAccessoryEquipped<SolarCharm>(Player))
+                {
+                    float distance = target.Distance(Player.position);
+                    distance *= 0.015f;
+                    if(distance <= 1f)
                     {
-                        damage += 10;
+                        // 100% bonus
+                        damage *= 2;
+                    } else if(distance <= 50f)
+                    {
+                        float damage_bonus = damage / distance;
+                        damage += (int)damage_bonus;
+                    }
+                }
+                //Vortex Charm effects
+                if(proj.DamageType == DamageClass.Ranged && Helpers.HasPlayerAccessoryEquipped<VortexCharm>(Player))
+                {
+                    if(Main.rand.NextDouble() <= 0.1d) {
+                        double effect = Main.rand.NextDouble();
+                        if(effect <= 0.2d) {
+                            target.AddBuff(BuffID.OnFire3, 240);
+                        } else if (effect <= 0.4d) {
+                            target.AddBuff(BuffID.ShadowFlame, 240);
+                        } else if (effect <= 0.6d) {
+                            target.AddBuff(BuffID.CursedInferno, 240);
+                        } else if (effect <= 0.8d) {
+                            target.AddBuff(BuffID.Frostburn, 240);
+                        } else {
+                            target.AddBuff(BuffID.Ichor, 240);
+                        }
+                    }
+                    if (Main.rand.NextDouble() <= 0.05d) {
+                        target.AddBuff(BuffID.BetsysCurse, 240);
                     }
                 }
             }
@@ -203,6 +309,26 @@ namespace Combinations
 
         public override void PreUpdateBuffs()
         {
+            if(Helpers.HasPlayerAccessoryEquipped<NebulaCharm>(Player))
+            {
+                Player.AddBuff(NebulaCharmBuff._type_unsafe, 10);
+            }
+            if(Player.HasBuff<NebulaCharmBuff>())
+            {
+                // 1.75 * 60 * 60 * 5 = 31500 -> 1.75 minutes for full charge
+                // 1 minute for full buff
+                // 45 seconds burst buffer
+                if (NebulaCharmCharge >= 31500)
+                {
+                    NebulaCharmCharge = 31500;
+                } else
+                {
+                    NebulaCharmCharge += 5;
+                }
+            } else
+            {
+                NebulaCharmCharge = 0;
+            }
             if (Helpers.HasPlayerAccessoryEquipped<DeadlyEnviromentGear>(Player))
             {
                 if (lastHurt < DateTime.Now.Subtract(TimeSpan.FromSeconds(5d)))
@@ -223,6 +349,19 @@ namespace Combinations
                 }
             }
             base.PreUpdateBuffs();
+        }
+
+        public override void ModifyDrawLayerOrdering(IDictionary<PlayerDrawLayer, PlayerDrawLayer.Position> positions)
+        {
+            //This layer is for our glowing sword example!
+            HandsOnAccessoryGlowDrawLayer layer = new HandsOnAccessoryGlowDrawLayer();
+            PlayerDrawLayer parent = positions.Keys.First(x => x.Name == "HandOnAcc");
+            if (parent is not null)
+            {
+                var position = new PlayerDrawLayer.AfterParent(parent);
+                positions.Add(layer, position);
+            }
+            base.ModifyDrawLayerOrdering(positions);
         }
 
         public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)

@@ -13,7 +13,7 @@ namespace Combinations.Items.CharmOfSummoning
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "5% increased summon damage\n" +
-                "10% increased whip speed");
+                "8% increased whip speed");
             DisplayName.SetDefault("Charm of Summoning");
         }
 
@@ -42,7 +42,7 @@ namespace Combinations.Items.CharmOfSummoning
         {
             player.pStone = true;
             player.GetDamage(DamageClass.Summon) += 0.05f;
-            float multiplier = 1f / 1.1f;
+            float multiplier = 1f / 1.08f;
             player.GetAttackSpeed(DamageClass.SummonMeleeSpeed) *= multiplier;
         }
 

@@ -15,6 +15,22 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.8] - 2022-05-15
+### Added
+- Master Throwing Charm
+- Nebula Charm
+- Solar Charm
+- Stardust Charm
+- Vortex Charm
+
+### Changed
+- Charm of Summoning Whip Speed 10% -> 8%
+- Charm of Throwing Buff Damage will be rounded up instead of down
+- Charm of Throwing velocity bonus increased to 20%
+
+### Fixed
+- Hell Boots correctly grant 2% critical strike chance
+
 ## [0.7] - 2022-05-12
 ### Added
 - Builders Pack

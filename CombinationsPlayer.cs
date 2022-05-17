@@ -86,13 +86,7 @@ namespace Combinations
             //not very low charge
             if (charge > 1500)
             {
-                if(charge > 18000)
-                {
-                    modifier += 0.2f;
-                } else
-                {
-                    modifier += (charge / 90000f);
-                }
+                modifier += (charge / 90000f);
             }
             return modifier;
         }
@@ -137,13 +131,14 @@ namespace Combinations
                 if (proj.DamageType == DamageClass.Melee && !ProjectileID.Sets.IsAWhip[proj.type] && Helpers.HasPlayerAccessoryEquipped<SolarCharm>(Player))
                 {
                     float distance = target.Distance(Player.position);
-                    distance *= 0.015f;
+                    distance *= 0.0075f;
                     if(distance <= 1f)
                     {
-                        // 100% bonus
-                        damage *= 2;
+                        // 50% bonus
+                        damage = (int)(damage * 1.5f);
                     } else if(distance <= 50f)
                     {
+                        // 50% -> 0% bonus
                         float damage_bonus = damage / distance;
                         damage += (int)damage_bonus;
                     }
@@ -315,12 +310,11 @@ namespace Combinations
             }
             if(Player.HasBuff<NebulaCharmBuff>())
             {
-                // 1.75 * 60 * 60 * 5 = 31500 -> 1.75 minutes for full charge
+                // 60 * 60 * 5 = 18000 -> 1 minute for full charge
                 // 1 minute for full buff
-                // 45 seconds burst buffer
-                if (NebulaCharmCharge >= 31500)
+                if (NebulaCharmCharge >= 18000)
                 {
-                    NebulaCharmCharge = 31500;
+                    NebulaCharmCharge = 18000;
                 } else
                 {
                     NebulaCharmCharge += 5;

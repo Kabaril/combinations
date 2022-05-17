@@ -15,6 +15,14 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.9] - 2022-05-17
+### Changed
+- Solar Charm maximum bonus for ranged melee decreased to 50%
+- Nebula Charm no longer has a buffer for the charged damage bonus
+
+### Fixed
+- Master Throwing Charm works correctly in Multiplayer
+
 ## [0.8] - 2022-05-15
 ### Added
 - Master Throwing Charm

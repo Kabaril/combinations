@@ -17,22 +17,19 @@ namespace Combinations
                 {
                     if(projectile.DamageType == DamageClass.Throwing)
                     {
-                        Item item = null;
                         if (source is EntitySource_ItemUse source_item)
                         {
-                            item = source_item.Item;
+                            CreateGhostCopy(projectile, source_item);
                         }
-                        CreateGhostCopy(projectile, source, item);
                     } else
                     {
-                        Item item = null;
                         if (source is EntitySource_ItemUse source_item)
                         {
-                            item = source_item.Item;
-                        }
-                        if (projectile.DamageType == DamageClass.Ranged && item is not null && item.consumable)
-                        {
-                            CreateGhostCopy(projectile, source, item);
+                            Item item = source_item.Item;
+                            if (projectile.DamageType == DamageClass.Ranged && item is not null && item.consumable)
+                            {
+                                CreateGhostCopy(projectile, source_item);
+                            }
                         }
                     }
 
@@ -41,15 +38,17 @@ namespace Combinations
             base.OnSpawn(projectile, source);
         }
 
-        private static void CreateGhostCopy(Projectile projectile, IEntitySource source, Item source_item = null)
+        private static void CreateGhostCopy(Projectile projectile, EntitySource_ItemUse source_item)
         {
-            //spawn on the server, because we dont have player here
-            if (Main.netMode != NetmodeID.MultiplayerClient)
+            if(source_item.Entity is Player player)
             {
-                EntitySource_MasterThrowingCharm clone_source = new EntitySource_MasterThrowingCharm();
-                Vector2 clone_position = projectile.position;
-                clone_position.Y -= (projectile.height / 2f);
-                Projectile.NewProjectile(clone_source, clone_position, projectile.velocity, projectile.type, projectile.damage, projectile.knockBack, projectile.owner, projectile.ai[0], projectile.ai[1]);
+                if(Main.netMode != NetmodeID.Server && player.whoAmI == Main.myPlayer)
+                {
+                    EntitySource_MasterThrowingCharm clone_source = new EntitySource_MasterThrowingCharm();
+                    Vector2 clone_position = projectile.position;
+                    clone_position.Y -= (projectile.height / 2f);
+                    Projectile.NewProjectile(clone_source, clone_position, projectile.velocity, projectile.type, projectile.damage, projectile.knockBack, projectile.owner, projectile.ai[0], projectile.ai[1]);
+                }
             }
         }
     }

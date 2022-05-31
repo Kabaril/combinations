@@ -53,7 +53,7 @@ namespace Combinations.Items.MoltenShield
             player.fireWalk = true;
             player.lavaRose = true;
             player.magmaStone = true;
-            player.inferno = true;
+            player.inferno = !CombinationsConfig.Instance.HideMoltenShieldRing && !hideVisual;
             player.hasRaisableShield = true;
             Lighting.AddLight((int)(player.Center.X / 16f), (int)(player.Center.Y / 16f), 0.65f, 0.4f, 0.1f);
             if (player.whoAmI != Main.myPlayer)

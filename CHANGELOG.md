@@ -15,6 +15,11 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.10] - 2022-05-31
+### Changed
+- Inferno Ring visual effect of Molten Shield can now be turned off in settings
+- Inferno Ring visual effect of Molten Shield is toggled by accessory visibility
+
 ## [0.9] - 2022-05-17
 ### Changed
 - Solar Charm maximum bonus for ranged melee decreased to 50%

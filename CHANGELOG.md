@@ -15,6 +15,11 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.11] - 2022-06-05
+### Added
+- Unholy Abomination
+- Wilderness Guide
+
 ## [0.10] - 2022-05-31
 ### Changed
 - Inferno Ring visual effect of Molten Shield can now be turned off in settings

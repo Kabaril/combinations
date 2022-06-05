@@ -7,6 +7,36 @@ namespace Combinations
 {
     public static class Helpers
     {
+        public static bool HasPlayerItemInInventory(Player player, int type)
+        {
+            foreach(Item item in player.inventory)
+            {
+                if (!item.IsAir)
+                {
+                    if (type == item.type)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static bool HasPlayerItemInInventory<T>(Player player) where T : ModItem
+        {
+            foreach (Item item in player.inventory)
+            {
+                if (!item.IsAir)
+                {
+                    if (item.ModItem is T)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         public static bool HasPlayerAccessoryEquipped(Player player, int type)
         {
             int maxAccessoryIndex = 5 + player.extraAccessorySlots;

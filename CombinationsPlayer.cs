@@ -18,6 +18,8 @@ using Combinations.Items.VortexCharm;
 using Combinations.Items.NebulaCharm;
 using Combinations.Items.StardustCharm;
 using System.Collections.Generic;
+using Combinations.Items.WildernessGuide;
+using Combinations.Items.UnholyAbomination;
 
 namespace Combinations
 {
@@ -98,6 +100,13 @@ namespace Combinations
             {
                 // 100% bonus
                 damage *= 2;
+            }
+            if(item.ModItem is UnholyAbomination)
+            {
+                if (Main.rand.NextBool(5))
+                {
+                    target.AddBuff(24, 180);
+                }
             }
             base.ModifyHitNPC(item, target, ref damage, ref knockback, ref crit);
         }
@@ -300,6 +309,16 @@ namespace Combinations
                 }
             }
             base.PreUpdate();
+        }
+
+        public override void PostUpdateEquips()
+        {
+            if(Helpers.HasPlayerItemInInventory<WildernessGuide>(Player))
+            {
+                Player.cordage = true;
+                Player.dontHurtCritters = true;
+            }
+            base.PostUpdateEquips();
         }
 
         public override void PreUpdateBuffs()

@@ -1,6 +1,7 @@
 Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 
 Currently 32 Accessories are added
+Currently 1 Tool is added
 
 Some of the Items added:
 
@@ -18,6 +19,8 @@ Molten Shield
 Charm of True Flight
 Deadly Enviroment Gear
 Hell Boots
+Builders Pack
+Unholy Abomination
 
 You can read more about these Accessories on the wiki: https://github.com/Kabaril/combinations/wiki
 

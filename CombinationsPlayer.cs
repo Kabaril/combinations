@@ -366,13 +366,12 @@ namespace Combinations
 
         public override void ModifyDrawLayerOrdering(IDictionary<PlayerDrawLayer, PlayerDrawLayer.Position> positions)
         {
-            //This layer is for our glowing sword example!
-            HandsOnAccessoryGlowDrawLayer layer = new HandsOnAccessoryGlowDrawLayer();
-            PlayerDrawLayer parent = positions.Keys.First(x => x.Name == "HandOnAcc");
-            if (parent is not null)
+            HandsOnAccessoryGlowDrawLayer hands_layer = new HandsOnAccessoryGlowDrawLayer();
+            PlayerDrawLayer hands_parent = positions.Keys.First(x => x.Name == "HandOnAcc");
+            if (hands_parent is not null)
             {
-                var position = new PlayerDrawLayer.AfterParent(parent);
-                positions.Add(layer, position);
+                var position = new PlayerDrawLayer.AfterParent(hands_parent);
+                positions.Add(hands_layer, position);
             }
             base.ModifyDrawLayerOrdering(positions);
         }

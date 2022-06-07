@@ -15,6 +15,11 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.12] - 2022-06-07
+### Added
+- Archmagi Luminarium
+- Crafting Recipes for Flamewaker Boots, Jellyfish Necklace, Diving Helmet, Bottomless Lava Bucket, Bottomless Bucket, Super Absorbant Sponge, Lava Absorbant Sponge
+
 ## [0.11] - 2022-06-05
 ### Added
 - Unholy Abomination

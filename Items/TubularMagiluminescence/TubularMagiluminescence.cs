@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.TubularMagiluminescence
 {
@@ -15,6 +16,7 @@ namespace Combinations.Items.TubularMagiluminescence
                 "Increases movement speed and acceleration\n" +
                 "Provides light when worn\n" +
                 "'How exactly does this float?'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

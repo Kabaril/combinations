@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using System.Reflection;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.BonePile
 {
@@ -17,6 +18,7 @@ namespace Combinations.Items.BonePile
                 "'You try not to think about their origin'");
             //not really great, but the alternative is rewriting a large chunk of decompiled code
             _unsafe_spawn_hallucination_delegate = typeof(Player).GetMethod("SpawnHallucination", BindingFlags.NonPublic | BindingFlags.Instance);
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

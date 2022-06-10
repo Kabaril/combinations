@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfThrowing
 {
@@ -17,6 +18,7 @@ namespace Combinations.Items.CharmOfThrowing
                 "20% increased throwing velocity\n" +
                 "'The path ahead is unclear'");
             DisplayName.SetDefault("Charm of Throwing");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

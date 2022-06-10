@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.HellBoots
 {
@@ -17,6 +18,7 @@ namespace Combinations.Items.HellBoots
                 "Leaves a trail of flames in your wake\n" +
                 "If worn in the Underworld, grants minor increase to damage, attack speed, critical strike chance,\n" +
                 "life regeneration and defense");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

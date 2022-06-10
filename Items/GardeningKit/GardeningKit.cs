@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.GardeningKit
 {
@@ -13,6 +14,7 @@ namespace Combinations.Items.GardeningKit
                 "Flowers grow on the grass you walk on\n" +
                 "Does not decrease drop rate when breaking plants\n" +
                 "'Now where did I put that gnome?'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

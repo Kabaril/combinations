@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.VortexCharm
 {
@@ -19,6 +20,7 @@ namespace Combinations.Items.VortexCharm
                 "5% increased ranged damage\n" +
                 "5% ranged critical strike chance\n" +
                 "Applies random effects when striking enemies");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/VortexCharm/VortexCharm_HandsOn_Glow");

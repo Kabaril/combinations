@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.BuildersPack
 {
@@ -15,6 +16,7 @@ namespace Combinations.Items.BuildersPack
                 "Automatically paints placed objects\n" +
                 "Increases block placement & tool range by 4\n" +
                 "Hold UP to reach higher");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.AgletOfTheWind
 {
@@ -11,6 +12,7 @@ namespace Combinations.Items.AgletOfTheWind
         {
             Tooltip.SetDefault("12% increased movement speed");
             DisplayName.SetDefault("Aglet of the Wind");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

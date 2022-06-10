@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.BandOfToughness
 {
@@ -13,6 +14,7 @@ namespace Combinations.Items.BandOfToughness
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "'How tough are you?'");
             DisplayName.SetDefault("Band of Toughness");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

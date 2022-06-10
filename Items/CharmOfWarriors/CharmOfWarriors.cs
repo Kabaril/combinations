@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfWarriors
 {
@@ -14,6 +15,7 @@ namespace Combinations.Items.CharmOfWarriors
                 "Reduces the cooldown of healing potions by 25%\n" +
                 "5% increased melee damage");
             DisplayName.SetDefault("Charm of Warriors");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

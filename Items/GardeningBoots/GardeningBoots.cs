@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.GardeningBoots
 {
@@ -14,6 +15,7 @@ namespace Combinations.Items.GardeningBoots
                 "Allows the collection of Vine Rope from vines\n" +
                 "Flowers grow on the grass you walk on\n" +
                 "Does not decrease drop rate when breaking plants");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

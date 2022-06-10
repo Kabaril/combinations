@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfRangers
 {
@@ -15,6 +16,7 @@ namespace Combinations.Items.CharmOfRangers
                 "5% increased ranged damage\n" +
                 "5% ranged critical strike chance");
             DisplayName.SetDefault("Charm of Rangers");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

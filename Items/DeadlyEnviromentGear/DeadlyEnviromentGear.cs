@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.DeadlyEnviromentGear
 {
@@ -17,6 +18,7 @@ namespace Combinations.Items.DeadlyEnviromentGear
             "Releases bees and douses the user in honey when damaged\n" +
             "Reduces damage from touching lava\n" +
             "Grants a recharging protective barrier");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

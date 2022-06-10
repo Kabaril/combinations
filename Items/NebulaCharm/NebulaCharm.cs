@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.NebulaCharm
 {
@@ -19,6 +20,7 @@ namespace Combinations.Items.NebulaCharm
                 "Increases maximum mana by 20\n" +
                 "5% increased magic damage\n" +
                 "Grants a damage charging buff");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/NebulaCharm/NebulaCharm_HandsOn_Glow");

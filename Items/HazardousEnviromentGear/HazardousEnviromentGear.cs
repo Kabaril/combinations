@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.HazardousEnviromentGear
 {
@@ -16,6 +17,7 @@ namespace Combinations.Items.HazardousEnviromentGear
             "Grants immunity to fire blocks, poison and fall damage\n" +
             "Releases bees and douses the user in honey when damaged\n" +
             "'H.E.V. Gear'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

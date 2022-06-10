@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.WildernessGuide
 {
@@ -12,6 +13,7 @@ namespace Combinations.Items.WildernessGuide
             Tooltip.SetDefault("Allows the collection of Vine Rope from vines\n" +
                 "Prevents you from hurting critters while in the inventory\n" +
                 "'Does not explain the forces of nature'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

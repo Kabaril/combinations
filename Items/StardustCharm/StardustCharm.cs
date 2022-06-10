@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.StardustCharm
 {
@@ -19,6 +20,7 @@ namespace Combinations.Items.StardustCharm
                 "5% increased summon damage\n" +
                 "8% increased whip speed\n" +
                 "Minion attacks will make struck enemies vulnerable to you");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/StardustCharm/StardustCharm_HandsOn_Glow");

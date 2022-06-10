@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MoltenShield
 {
@@ -18,6 +19,7 @@ namespace Combinations.Items.MoltenShield
                 "Grants immunity to knockback\n"+
                 "Nearby enemies are ignited\n" +
                 "'Any Hellknight needs one'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.UnholyAbomination
 {
@@ -11,6 +12,7 @@ namespace Combinations.Items.UnholyAbomination
         {
             Tooltip.SetDefault("Strong enough to destroy Demon Altars");
             ItemID.Sets.CatchingTool[Type] = true;
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

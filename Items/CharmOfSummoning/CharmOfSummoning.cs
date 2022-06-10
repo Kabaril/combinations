@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfSummoning
 {
@@ -15,6 +16,7 @@ namespace Combinations.Items.CharmOfSummoning
                 "5% increased summon damage\n" +
                 "8% increased whip speed");
             DisplayName.SetDefault("Charm of Summoning");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

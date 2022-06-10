@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.ArchmagiLuminarium
 {
@@ -17,6 +18,7 @@ namespace Combinations.Items.ArchmagiLuminarium
                 "Stars restore mana when collected\n" +
                 "Increases movement speed and acceleration\n" +
                 "Provides light when worn");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

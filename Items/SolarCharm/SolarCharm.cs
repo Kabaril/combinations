@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.SolarCharm
 {
@@ -19,6 +20,7 @@ namespace Combinations.Items.SolarCharm
                 "5% increased melee damage\n" +
                 "Attacks deal more damage based on proximity\n" +
                 "'Come a bit closer'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/SolarCharm/SolarCharm_HandsOn_Glow");

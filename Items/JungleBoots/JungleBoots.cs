@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.JungleBoots
 {
@@ -18,6 +19,7 @@ namespace Combinations.Items.JungleBoots
                 "Increases alchemy plant collection\n" +
                 "Increases health and mana recovery\n" +
                 "Summons spores over time that will damage enemies");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

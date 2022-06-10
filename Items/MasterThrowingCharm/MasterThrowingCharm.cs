@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MasterThrowingCharm
 {
@@ -16,6 +17,7 @@ namespace Combinations.Items.MasterThrowingCharm
                 "8% increased throwing critical strike chance\n" +
                 "20% increased throwing velocity\n" +
                 "Throws two projectiles at a time");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

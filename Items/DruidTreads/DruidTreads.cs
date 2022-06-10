@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.DruidTreads
 {
@@ -16,6 +17,7 @@ namespace Combinations.Items.DruidTreads
                 "Flowers grow on the grass you walk on\n" +
                 "Does not decrease drop rate when breaking plants\n" +
                 "Increases alchemy plant collection");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

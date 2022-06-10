@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MagicArrow
 {
@@ -11,6 +12,7 @@ namespace Combinations.Items.MagicArrow
         {
             Tooltip.SetDefault("Flight can be extended for Mana\n" +
                 "'Fly with me - and be free'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

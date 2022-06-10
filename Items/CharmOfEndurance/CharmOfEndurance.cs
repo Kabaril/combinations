@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfEndurance
 {
@@ -13,6 +14,7 @@ namespace Combinations.Items.CharmOfEndurance
             Tooltip.SetDefault("Slowly regenerates life\n" +
                 "Reduces the cooldown of healing potions by 25%");
             DisplayName.SetDefault("Charm of Endurance");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

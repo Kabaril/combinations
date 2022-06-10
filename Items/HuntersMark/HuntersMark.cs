@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.HuntersMark
 {
@@ -12,6 +13,7 @@ namespace Combinations.Items.HuntersMark
             Tooltip.SetDefault("Increases pickup range for items\n" +
                 "Marks enemies in ranged combat\n" +
                 "'Relentless he stalks his prey'");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using System.Collections.Generic;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MoonTablet
 {
@@ -12,6 +13,7 @@ namespace Combinations.Items.MoonTablet
             Tooltip.SetDefault("Turns the holder into a werewolf at night\n" +
                 "If worn during the night, grants minor increase to damage, melee speed, critical strike chance,\n" +
                 "life regeneration, defense, mining speed, and minion knockback");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

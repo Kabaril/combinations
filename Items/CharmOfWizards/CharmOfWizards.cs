@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfWizards
 {
@@ -15,6 +16,7 @@ namespace Combinations.Items.CharmOfWizards
                 "Increases maximum mana by 20\n" +
                 "5% increased magic damage");
             DisplayName.SetDefault("Charm of Wizards");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

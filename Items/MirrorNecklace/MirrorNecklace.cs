@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MirrorNecklace
 {
@@ -13,6 +14,7 @@ namespace Combinations.Items.MirrorNecklace
             Tooltip.SetDefault("Increases your max number of minions by 1\n" +
                 "Immunity to petrification\n" +
                 "Increases summon tag damage");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()

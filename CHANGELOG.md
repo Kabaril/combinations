@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.14] - 2022-06-23
+### Fixed
+- Magic Arrow no longer drains Mana when using a Mount
+
 ## [0.13] - 2022-06-10
 ### Changed
 - All Items are researchable in Journey Mode now

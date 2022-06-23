@@ -288,7 +288,7 @@ namespace Combinations
 
         public override void PreUpdate()
         {
-            if(Helpers.HasPlayerAccessoryEquipped<MagicArrow>(Player))
+            if(Helpers.HasPlayerAccessoryEquipped<MagicArrow>(Player) && !(Player.mount is not null && Player.mount.Active))
             {
                 if(Player.wingTime <= 1f && Player.wingTimeMax > 0f)
                 {

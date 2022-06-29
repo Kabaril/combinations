@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.15] - 2022-06-29
+### Fixed
+- Hopefully fixed a bug that broke death triggers in calamity
+
 ## [0.14] - 2022-06-23
 ### Fixed
 - Magic Arrow no longer drains Mana when using a Mount

@@ -10,6 +10,10 @@ namespace Combinations
     {
         public override bool StrikeNPC(NPC npc, ref double damage, int defense, ref float knockback, int hitDirection, ref bool crit)
         {
+            if(damage == 0.0)
+            {
+                return false;
+            }
             if(npc.HasBuff<HuntersMarkBuffOne>())
             {
                 defense -= 5;

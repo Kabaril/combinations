@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.16] - 2022-07-02
+### Fixed
+- tModLoader API Changes
+
 ## [0.15] - 2022-06-29
 ### Fixed
 - Hopefully fixed a bug that broke death triggers in calamity

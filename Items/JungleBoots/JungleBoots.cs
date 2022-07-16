@@ -45,7 +45,7 @@ namespace Combinations.Items.JungleBoots
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.cordage = true;
+            player.cordage = !CombinationsConfig.Instance.DisableVineRopeForBoots;
             player.accRunSpeed = 6f;
             player.rocketBoots = 2;
             player.vanityRocketBoots = 2;

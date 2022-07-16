@@ -16,5 +16,12 @@ namespace Combinations
         [Tooltip("Hide Ring of Inferno effect of Molten Shield")]
         [DefaultValue(false)]
         public bool HideMoltenShieldRing;
+
+        [Header("Gameplay")]
+
+        [Label("Disable Vine Rope Collection for Boots")]
+        [Tooltip("No more Vine Rope clogging up your Inventory!")]
+        [DefaultValue(false)]
+        public bool DisableVineRopeForBoots;
     }
 }

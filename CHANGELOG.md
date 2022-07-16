@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.17] - 2022-07-16
+### Added
+- Added Option to disable Vine Rope Collection for Boots
+
 ## [0.16] - 2022-07-02
 ### Fixed
 - tModLoader API Changes

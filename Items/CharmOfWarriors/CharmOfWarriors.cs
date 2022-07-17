@@ -26,8 +26,8 @@ namespace Combinations.Items.CharmOfWarriors
             Item.value = Item.sellPrice(0, 5);
             Item.rare = ItemRarityID.LightPurple;
             Item.stack = 1;
-            Item.lifeRegen = 2;
-            Item.defense = 4;
+            Item.lifeRegen = BandOfToughness.BandOfToughness.base_regen_value;
+            Item.defense = BandOfToughness.BandOfToughness.base_defense_value + 3;
         }
 
         public override void AddRecipes()

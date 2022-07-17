@@ -89,6 +89,7 @@ namespace Combinations
         public override void Unload()
         {
             Logger.Info("Unloading Combinations");
+            Helpers.Unload();
         }
     }
 }

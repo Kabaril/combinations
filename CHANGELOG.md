@@ -15,6 +15,11 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.18] - 2022-07-17
+### Changed
+- Improved Mod Compatability
+- Calamity Balance improved
+
 ## [0.17] - 2022-07-16
 ### Added
 - Added Option to disable Vine Rope Collection for Boots

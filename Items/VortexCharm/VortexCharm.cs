@@ -40,8 +40,8 @@ namespace Combinations.Items.VortexCharm
             Item.value = Item.sellPrice(0, 5);
             Item.rare = ItemRarityID.Red;
             Item.stack = 1;
-            Item.lifeRegen = 2;
-            Item.defense = 1;
+            Item.lifeRegen = BandOfToughness.BandOfToughness.base_regen_value;
+            Item.defense = BandOfToughness.BandOfToughness.base_defense_value;
         }
 
         public override void AddRecipes()

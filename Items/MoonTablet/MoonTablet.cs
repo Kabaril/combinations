@@ -8,11 +8,19 @@ namespace Combinations.Items.MoonTablet
 {
     public class MoonTablet : CombinationsBaseModItem
     {
+        internal static int? NightwitherDebuffType = null;
+
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Turns the holder into a werewolf at night\n" +
+            string tooltip = "Turns the holder into a werewolf at night\n" +
                 "If worn during the night, grants minor increase to damage, melee speed, critical strike chance,\n" +
-                "life regeneration, defense, mining speed, and minion knockback");
+                "life regeneration, defense, mining speed, and minion knockback";
+            if (ModContent.TryFind("CalamityMod/Nightwither", out ModBuff NightwitherDebuff))
+            {
+                NightwitherDebuffType = NightwitherDebuff.Type;
+                tooltip += "\nGrants immunity to Nightwither";
+            }
+            Tooltip.SetDefault(tooltip);
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -44,6 +52,10 @@ namespace Combinations.Items.MoonTablet
             }
             player.wolfAcc = true;
             player.hideWolf = hideVisual;
+            if (NightwitherDebuffType is not null)
+            {
+                player.buffImmune[NightwitherDebuffType.Value] = true;
+            }
             base.UpdateAccessory(player, hideVisual);
         }
 

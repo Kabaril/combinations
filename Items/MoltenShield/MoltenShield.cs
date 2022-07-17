@@ -5,12 +5,15 @@ using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using System.Collections.Generic;
 using Terraria.GameContent.Creative;
+using System;
 
 namespace Combinations.Items.MoltenShield
 {
     [AutoloadEquip(EquipType.Shield)]
     public class MoltenShield : CombinationsBaseModItem
     {
+        internal static int base_defense_value = 2;
+
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Melee attacks inflict fire damage\n" +
@@ -20,6 +23,16 @@ namespace Combinations.Items.MoltenShield
                 "Nearby enemies are ignited\n" +
                 "'Any Hellknight needs one'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Item skull_rose = Helpers.GetInitilizedDummyItem(ItemID.MoltenSkullRose);
+            if(skull_rose is not null)
+            {
+                base_defense_value = skull_rose.defense;
+            }
+            Item obsidian_shield = Helpers.GetInitilizedDummyItem(ItemID.ObsidianShield);
+            if(obsidian_shield is not null)
+            {
+                base_defense_value = Math.Max(base_defense_value, obsidian_shield.defense);
+            }
         }
 
         public override void SetDefaults()
@@ -30,7 +43,7 @@ namespace Combinations.Items.MoltenShield
             Item.value = Item.sellPrice(0, 7, 0);
             Item.rare = ItemRarityID.LightPurple;
             Item.stack = 1;
-            Item.defense = 2;
+            Item.defense = base_defense_value;
         }
 
         public override void AddRecipes()

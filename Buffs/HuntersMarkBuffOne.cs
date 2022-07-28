@@ -8,14 +8,11 @@ namespace Combinations.Buffs
 {
     public class HuntersMarkBuffOne : ModBuff
     {
-		internal static int _type_unsafe;
-
         public static Asset<Texture2D> buff_hit_texture;
         public const string HitTexturePath = "Combinations/Buffs/HuntersMarkOne";
 
         public override void SetStaticDefaults()
 		{
-			_type_unsafe = Type;
 			DisplayName.SetDefault("Hunters Mark");
 			Description.SetDefault("The hunt begins");
 			Main.debuff[Type] = true;

@@ -6,11 +6,8 @@ namespace Combinations.Buffs
 {
     public class HuntersMarkBuffThree : ModBuff
     {
-		internal static int _type_unsafe;
-
 		public override void SetStaticDefaults()
 		{
-			_type_unsafe = Type;
 			DisplayName.SetDefault("Hunters Mark");
 			Description.SetDefault("The hunt begins");
 			Main.debuff[Type] = true;

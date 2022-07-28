@@ -6,11 +6,8 @@ namespace Combinations.Buffs
 {
     public class StardustCharmBuff : ModBuff
 	{
-		internal static int _type_unsafe;
-
 		public override void SetStaticDefaults()
 		{
-			_type_unsafe = Type;
 			DisplayName.SetDefault("Stardust Charm");
 			Description.SetDefault("Tagged by Stardust Charm");
 			Main.debuff[Type] = true;

@@ -116,13 +116,13 @@ namespace Combinations
             //Any whip can apply MirrorNecklaceBuff even if it does not have a tag itself
             if (Helpers.HasPlayerAccessoryEquipped<MirrorNecklace>(Player) && ProjectileID.Sets.IsAWhip[proj.type])
             {
-                target.AddBuff(MirrorNecklaceBuff._type_unsafe, 240);
+                target.AddBuff(ModContent.BuffType<MirrorNecklaceBuff>(), 240);
             }
             if(!proj.npcProj && !proj.trap && (proj.minion || ProjectileID.Sets.MinionShot[proj.type]))
             {
                 if (Helpers.HasPlayerAccessoryEquipped<StardustCharm>(Player))
                 {
-                    target.AddBuff(StardustCharmBuff._type_unsafe, 240);
+                    target.AddBuff(ModContent.BuffType<StardustCharmBuff>(), 240);
                 }
                 if(target.HasBuff<MirrorNecklaceBuff>())
                 {
@@ -237,7 +237,7 @@ namespace Combinations
                         default:
                         case 0:
                             {
-                                target.AddBuff(HuntersMarkBuffOne._type_unsafe, 600);
+                                target.AddBuff(ModContent.BuffType<HuntersMarkBuffOne>(), 600);
                                 break;
                             }
                         case 1:
@@ -247,7 +247,7 @@ namespace Combinations
                                 {
                                     target.DelBuff(buff_index);
                                 }
-                                target.AddBuff(HuntersMarkBuffTwo._type_unsafe, 720);
+                                target.AddBuff(ModContent.BuffType<HuntersMarkBuffTwo>(), 720);
                                 break;
                             }
                         case 2:
@@ -257,7 +257,7 @@ namespace Combinations
                                 {
                                     target.DelBuff(buff_index);
                                 }
-                                target.AddBuff(HuntersMarkBuffThree._type_unsafe, 840);
+                                target.AddBuff(ModContent.BuffType<HuntersMarkBuffThree>(), 840);
                                 break;
                             }
                         case 3:
@@ -267,7 +267,7 @@ namespace Combinations
                                 {
                                     target.DelBuff(buff_index);
                                 }
-                                target.AddBuff(HuntersMarkBuffFour._type_unsafe, 960);
+                                target.AddBuff(ModContent.BuffType<HuntersMarkBuffFour>(), 960);
                                 break;
                             }
                         case 4:
@@ -325,7 +325,7 @@ namespace Combinations
         {
             if(Helpers.HasPlayerAccessoryEquipped<NebulaCharm>(Player))
             {
-                Player.AddBuff(NebulaCharmBuff._type_unsafe, 10);
+                Player.AddBuff(ModContent.BuffType<NebulaCharmBuff>(), 10);
             }
             if(Player.HasBuff<NebulaCharmBuff>())
             {
@@ -392,10 +392,10 @@ namespace Combinations
             base.CatchFish(attempt, ref itemDrop, ref npcSpawn, ref sonar, ref sonarPosition);
         }
 
-        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
         {
             lastHurt = DateTime.Now;
-            base.Hurt(pvp, quiet, damage, hitDirection, crit);
+            base.Hurt(pvp, quiet, damage, hitDirection, crit, cooldownCounter);
         }
     }
 }

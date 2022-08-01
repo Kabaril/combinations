@@ -15,6 +15,11 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.19] - 2022-08-01
+### Fixed
+- Fixed improper Buff Types usage
+- Moved Recipes to ModSystem
+
 ## [0.18] - 2022-07-17
 ### Changed
 - Improved Mod Compatability

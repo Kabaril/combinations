@@ -3,6 +3,9 @@ using Terraria.ModLoader;
 using Combinations.Buffs;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Terraria.ID;
+using Terraria.GameContent.ItemDropRules;
+using Combinations.Items.CrownOfLight;
 
 namespace Combinations
 {
@@ -69,6 +72,15 @@ namespace Combinations
                 spriteBatch.Draw(texture, pos, new Color(250, 20, 8));
             }
             base.PostDraw(npc, spriteBatch, screenPos, drawColor);
+        }
+
+        public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+        {
+            if (npc.type == NPCID.HallowBoss)
+            {
+                npcLoot.Add(ItemDropRule.MasterModeCommonDrop(ModContent.ItemType<CrownOfLight>()));
+            }
+            base.ModifyNPCLoot(npc, npcLoot);
         }
 
         private static Vector2 GetCenterScreenPos(NPC npc, Texture2D texture)

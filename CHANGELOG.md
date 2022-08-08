@@ -15,6 +15,14 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.21] - 2022-08-08
+## Added
+- Master Mode crafing Material Crown of Light
+
+### Changed
+- Textures of Hunters Mark, Magic Arrow and Charm of True Flight (made by @Allinxter)
+- Charm of True Flight actually needs a Master Mode material to craft
+
 ## [0.20] - 2022-08-02
 
 ## [0.19] - 2022-08-01

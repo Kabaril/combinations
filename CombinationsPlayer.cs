@@ -392,10 +392,10 @@ namespace Combinations
             base.CatchFish(attempt, ref itemDrop, ref npcSpawn, ref sonar, ref sonarPosition);
         }
 
-        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
         {
             lastHurt = DateTime.Now;
-            base.Hurt(pvp, quiet, damage, hitDirection, crit);
+            base.Hurt(pvp, quiet, damage, hitDirection, crit, cooldownCounter);
         }
     }
 }

@@ -15,6 +15,8 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.20] - 2022-08-02
+
 ## [0.19] - 2022-08-01
 ### Fixed
 - Fixed improper Buff Types usage

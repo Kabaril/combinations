@@ -380,7 +380,8 @@ namespace Combinations
         {
             if(Main.hardMode)
             {
-                if(Main.rand.Next(5, Math.Min(1000 - attempt.fishingLevel, 100)) <= 10)
+
+                if (attempt.rare && !attempt.legendary && !attempt.veryrare && Main.rand.NextBool(100))
                 {
                     sonar.Text = "Magic Arrow";
                     sonar.Color = Color.Red;

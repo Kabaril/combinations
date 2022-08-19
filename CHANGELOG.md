@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.22] - 2022-08-19
+## Fixed
+- Magic Arrow fishing chance
+
 ## [0.21] - 2022-08-08
 ## Added
 - Master Mode crafing Material Crown of Light

@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 
 namespace Combinations
 {
+    [Autoload(false)]
     public static class Helpers
     {
         public static void Unload()

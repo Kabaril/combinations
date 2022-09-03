@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.23] - 2022-09-03
+## Added
+- Experimental Inline Wiki (currently only Aglet of the Wind)
+
 ## [0.22] - 2022-08-19
 ## Fixed
 - Magic Arrow fishing chance

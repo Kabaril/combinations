@@ -7,7 +7,6 @@ namespace Combinations
         public override void Load()
         {
             Logger.Info("Initializing Combinations");
-            //WikiThisIntegration.LoadWikiThisIntegration(this);
         }
 
         public override void Unload()

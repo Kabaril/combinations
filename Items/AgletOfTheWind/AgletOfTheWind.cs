@@ -34,6 +34,31 @@ namespace Combinations.Items.AgletOfTheWind
             recipe.Register();
         }
 
+        public override bool CanRightClick()
+        {
+            return true;
+        }
+
+        public override void RightClick(Player player)
+        {
+            CombinationsModSystem.Instance.LoadWikiString(@"
+## Aglet Of The Wind ![Combinations/Items/AgletOfTheWind/AgletOfTheWind]
+
+The Aglet Of The Wind grants 12 % increased movement speed.
+
+The Aglet Of The Wind can be further upgraded into the Lightning Boots, like its parts.
+
+### Crafting
+
+![Combinations/Items/AgletOfTheWind/AgletOfTheWind] = ![Terraria/Images/Item_212] + ![Terraria/Images/Item_285]
+");
+        }
+
+        public override bool ConsumeItem(Player player)
+        {
+            return false;
+        }
+
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.moveSpeed += 0.12f;

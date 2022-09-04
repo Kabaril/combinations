@@ -30,6 +30,32 @@ namespace Combinations.Items.BandOfToughness
             }
         }
 
+        public override bool CanRightClick()
+        {
+            return true;
+        }
+
+        public override void RightClick(Player player)
+        {
+            CombinationsModSystem.Instance.LoadWikiString(@"
+## Band of Toughness ![Combinations/Items/BandOfToughness/BandOfToughness]
+
+When equipped, it regenerates 1 health every second.
+This effect stacks with the player's natural health regeneration,
+but unlike the natural regeneration,
+does not slow or stop when the player is moving or being attacked.
+
+### Crafting
+
+![Combinations/Items/BandOfToughness/BandOfToughness] = ![Terraria/Images/Item_49] + ![Terraria/Images/Item_216]
+");
+        }
+
+        public override bool ConsumeItem(Player player)
+        {
+            return false;
+        }
+
         public override void SetDefaults()
         {
             Item.accessory = true;

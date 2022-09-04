@@ -19,9 +19,8 @@ namespace Combinations.UI
         {
             this.rawText = rawText;
             compileText(rawText);
-            var closeButton = new CloseButton(CloseButton.Texture);
+            var closeButton = new CloseButton();
             closeButton.OnClick += CloseButton_OnClick;
-            closeButton.Activate();
             elements.Add(closeButton);
         }
 
@@ -84,13 +83,18 @@ namespace Combinations.UI
         private Tuple<string, List<InlineTextureUI>> getTexturesFromString(string line, float offset_left, float top, Color color, float scale)
         {
             List<InlineTextureUI> textures = new List<InlineTextureUI>();
-            MatchCollection matches = Regex.Matches(line, @"\!\[([^[]+)\]");
+            MatchCollection matches = Regex.Matches(line, @"\!\[([^[]+)\](t-?\d+)?");
             foreach(Match match in matches)
             {
                 int index = line.IndexOf(match.Value);
                 float left = FontAssets.MouseText.Value.MeasureString(line.Substring(0, index)).X * scale;
-                string texture_str = Regex.Match(match.Value, @"\!\[(.+)\]$").Groups[1].Value.Trim();
-                InlineTextureUI texture = new InlineTextureUI(texture_str, color, left + offset_left, top, scale);
+                string texture_str = match.Groups[1].Value.Trim();
+                float off_top = 0f;
+                if(match.Groups.Count >= 3 && match.Groups[2].Value != "")
+                {
+                    off_top = float.Parse(match.Groups[2].Value.Substring(1)) * scale;
+                }
+                InlineTextureUI texture = new InlineTextureUI(texture_str, color, left + offset_left, top + off_top, scale);
                 textures.Add(texture);
 
                 float replace_char_width = FontAssets.MouseText.Value.MeasureString(" ").X * scale;
@@ -188,13 +192,13 @@ namespace Combinations.UI
         {
             uIPanel = new DraggableUIPanel();
             uIPanel.SetPadding(0);
-            uIPanel.Left.Set(Main.screenWidth * 0.62f, 0f);
+            uIPanel.Left.Set(Main.screenWidth * 0.47f, 0f);
             uIPanel.Top.Set(Main.screenHeight * 0.1f, 0f);
             uIPanel.Width.Set(totalContentSize.X, 0f);
             uIPanel.Height.Set(totalContentSize.Y, 0f);
             uIPanel.BackgroundColor = new Color(73, 94, 171);
 
-            foreach(UIElement element in elements)
+            foreach (UIElement element in elements)
             {
                 uIPanel.Append(element);
             }

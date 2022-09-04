@@ -120,7 +120,7 @@ namespace Combinations
             if (mouseTextIndex != -1)
             {
                 layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
-                    "Combinations: Adds Accessories",
+                    "Combinations: Inline Wiki",
                     () => { UserInterface.Draw(Main.spriteBatch, new GameTime()); return true; },
                     InterfaceScaleType.UI)
                 );

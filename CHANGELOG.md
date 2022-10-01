@@ -15,6 +15,8 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.25] - 2022-10-01
+
 ## [0.24] - 2022-09-04
 ## Fixed
 - Inline Wiki Close Button

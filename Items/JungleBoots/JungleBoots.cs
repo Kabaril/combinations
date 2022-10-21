@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.JungleBoots
 {
     [AutoloadEquip(EquipType.Shoes)]
-    public class JungleBoots : CombinationsBaseModItem
+    public sealed class JungleBoots : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -59,8 +58,8 @@ namespace Combinations.Items.JungleBoots
 
         public static int ItemType() => ModContent.ItemType<JungleBoots>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 ItemID.SporeSac,

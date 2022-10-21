@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Combinations.Buffs
 {
-    public class HuntersMarkBuffOne : ModBuff
+    public sealed class HuntersMarkBuffOne : ModBuff
     {
         public static Asset<Texture2D> buff_hit_texture;
         public const string HitTexturePath = "Combinations/Buffs/HuntersMarkOne";

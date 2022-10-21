@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.HuntersMark
 {
-    public class HuntersMark : CombinationsBaseModItem
+    public sealed class HuntersMark : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -42,8 +41,8 @@ namespace Combinations.Items.HuntersMark
             player.treasureMagnet = true;
         }
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

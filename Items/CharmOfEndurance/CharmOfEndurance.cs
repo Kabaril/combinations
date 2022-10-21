@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.CharmOfEndurance
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class CharmOfEndurance : CombinationsBaseModItem
+    public sealed class CharmOfEndurance : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -50,10 +49,10 @@ namespace Combinations.Items.CharmOfEndurance
 
         public static int ItemType() => ModContent.ItemType<CharmOfEndurance>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
-                        ItemType(),
+                ItemType(),
             };
     }
 }

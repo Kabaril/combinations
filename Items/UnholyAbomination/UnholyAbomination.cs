@@ -6,7 +6,7 @@ using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.UnholyAbomination
 {
-    public class UnholyAbomination : ModItem
+    public sealed class UnholyAbomination : ModItem
     {
         public override void SetStaticDefaults()
         {

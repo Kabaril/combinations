@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.MirrorNecklace
 {
     [AutoloadEquip(EquipType.Neck)]
-    public class MirrorNecklace : CombinationsBaseModItem
+    public sealed class MirrorNecklace : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -44,10 +43,10 @@ namespace Combinations.Items.MirrorNecklace
 
         public static int ItemType() => ModContent.ItemType<MirrorNecklace>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
-                        ItemType(),
+                ItemType(),
             };
     }
 }

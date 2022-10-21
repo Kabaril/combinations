@@ -1,13 +1,12 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using System.Collections.Generic;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.BandOfToughness
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class BandOfToughness : CombinationsBaseModItem
+    public sealed class BandOfToughness : CombinationsBaseModItem
     {
         internal static int base_defense_value = 1;
         internal static int base_regen_value = 2;
@@ -79,8 +78,8 @@ does not slow or stop when the player is moving or being attacked.
 
         public static int ItemType() => ModContent.ItemType<BandOfToughness>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

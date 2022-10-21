@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.GardeningBoots
 {
-    public class GardeningBoots : CombinationsBaseModItem
+    public sealed class GardeningBoots : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -57,8 +56,8 @@ namespace Combinations.Items.GardeningBoots
 
         public static int ItemType() => ModContent.ItemType<GardeningBoots>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 GardeningKit.GardeningKit.ItemType(),

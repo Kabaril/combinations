@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.CharmOfWizards
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class CharmOfWizards : CombinationsBaseModItem
+    public sealed class CharmOfWizards : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -50,7 +49,7 @@ namespace Combinations.Items.CharmOfWizards
         public static int ItemType() => ModContent.ItemType<CharmOfWizards>();
 
 
-        public override List<int> IncompatibleAccessories() => new List<int>()
+        public override int[] IncompatibleAccessories() => new int[]
         {
             ItemType(),
             CharmOfEndurance.CharmOfEndurance.ItemType(),

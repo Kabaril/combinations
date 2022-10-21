@@ -6,7 +6,7 @@ using Combinations.Items.JungleBoots;
 
 namespace Combinations
 {
-    public class CombinationsTile : GlobalTile
+    public sealed class CombinationsTile : GlobalTile
     {
         private static int[] AlchemyBuffAccessories => new int[] { DruidTreads.ItemType(), OvergrownTreads.ItemType(), JungleBoots.ItemType() };
 

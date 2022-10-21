@@ -1,12 +1,11 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using System.Collections.Generic;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.AgletOfTheWind
 {
-    public class AgletOfTheWind : CombinationsBaseModItem
+    public sealed class AgletOfTheWind : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -66,8 +65,8 @@ The Aglet Of The Wind can be further upgraded into the Lightning Boots, like its
 
         public static int ItemType() => ModContent.ItemType<AgletOfTheWind>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

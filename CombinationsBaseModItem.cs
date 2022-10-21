@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -6,7 +8,7 @@ namespace Combinations
 {
     public abstract class CombinationsBaseModItem : ModItem
     {
-        public virtual List<int> IncompatibleAccessories() => new List<int>();
+        public virtual int[] IncompatibleAccessories() => Array.Empty<int>();
 
         public override bool CanEquipAccessory(Player player, int slot, bool modded)
         {

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.DruidTreads
 {
     [AutoloadEquip(EquipType.Shoes)]
-    public class DruidTreads : CombinationsBaseModItem
+    public sealed class DruidTreads : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -58,8 +57,8 @@ namespace Combinations.Items.DruidTreads
             }
         }
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 GardeningKit.GardeningKit.ItemType(),

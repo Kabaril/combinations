@@ -1,12 +1,11 @@
 ﻿using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using System.Collections.Generic;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MoonTablet
 {
-    public class MoonTablet : CombinationsBaseModItem
+    public sealed class MoonTablet : CombinationsBaseModItem
     {
         internal static int? NightwitherDebuffType = null;
 
@@ -68,8 +67,8 @@ namespace Combinations.Items.MoonTablet
 
         public static int ItemType() => ModContent.ItemType<MoonTablet>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

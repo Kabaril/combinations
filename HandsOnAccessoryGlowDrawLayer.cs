@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace Combinations
 {
-    public class HandsOnAccessoryGlowDrawLayer : PlayerDrawLayer
+    public sealed class HandsOnAccessoryGlowDrawLayer : PlayerDrawLayer
     {
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {

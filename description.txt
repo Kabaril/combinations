@@ -3,7 +3,7 @@ Combinations adds Accessories, which are mostly upgrades for vanilla Accessories
 If you are having issues with the Steam Workshop not updating automatically check [url=https://github.com/Kabaril/combinations/wiki/Steam-Workshop-Version-Problems] What to do if you do not get the current version from the Steam Workshop [/url]
 
 
-Currently 32 Accessories are added
+Currently 33 Accessories are added
 Currently 1 Tool is added
 
 Some of the Items added:

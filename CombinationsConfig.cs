@@ -3,7 +3,7 @@ using Terraria.ModLoader.Config;
 
 namespace Combinations
 {
-    public class CombinationsConfig : ModConfig
+    public sealed class CombinationsConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 

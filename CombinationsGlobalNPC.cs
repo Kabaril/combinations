@@ -9,7 +9,7 @@ using Combinations.Items.CrownOfLight;
 
 namespace Combinations
 {
-    public class CombinationsGlobalNPC : GlobalNPC
+    public sealed class CombinationsGlobalNPC : GlobalNPC
     {
         public override bool StrikeNPC(NPC npc, ref double damage, int defense, ref float knockback, int hitDirection, ref bool crit)
         {

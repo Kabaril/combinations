@@ -23,7 +23,7 @@ using Combinations.Items.UnholyAbomination;
 
 namespace Combinations
 {
-    public class CombinationsPlayer : ModPlayer
+    public sealed class CombinationsPlayer : ModPlayer
     {
         public DateTime lastHurt = DateTime.Now;
 

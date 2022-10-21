@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.WildernessGuide
 {
-    public class WildernessGuide : CombinationsBaseModItem
+    public sealed class WildernessGuide : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -43,8 +42,8 @@ namespace Combinations.Items.WildernessGuide
 
         public static int ItemType() => ModContent.ItemType<WildernessGuide>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

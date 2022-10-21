@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.HellBoots
 {
     [AutoloadEquip(EquipType.Shoes)]
-    public class HellBoots : CombinationsBaseModItem
+    public sealed class HellBoots : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -79,8 +78,8 @@ namespace Combinations.Items.HellBoots
 
         public static int ItemType() => ModContent.ItemType<HellBoots>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

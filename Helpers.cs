@@ -233,9 +233,9 @@ namespace Combinations
             {
                 field.SetValue(calamity_mod_player, value);
             }
-            catch
+            catch(Exception ex)
             {
-
+                Combinations.Instance.Logger.Error("Could not find Calamity Player Attribute " + property_name, ex);
             }
         }
 

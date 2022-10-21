@@ -3,11 +3,10 @@ using Terraria;
 using Terraria.ModLoader;
 using Combinations.Items.CharmOfThrowing;
 using Combinations.Items.MasterThrowingCharm;
-using System;
 
 namespace Combinations
 {
-    public class CombinationsGlobalItem : GlobalItem
+    public sealed class CombinationsGlobalItem : GlobalItem
     {
         private static int[] ThrowingBuffAccessories => new int[] { CharmOfThrowing.ItemType(), MasterThrowingCharm.ItemType() };
 
@@ -28,12 +27,12 @@ namespace Combinations
                 {
                     velocity.X *= 1.2f;
                     velocity.Y *= 1.2f;
-                    damage = (int)Math.Ceiling(damage * 1.08d);
+                    damage = (int)(damage * 1.08d + 1d);
 
                     if(item.DamageType != DamageClass.Throwing)
                     {
                         //just convert crit to damage in this case
-                        damage = (int)Math.Ceiling(damage * 1.08d);
+                        damage = (int)(damage * 1.08d + 1d);
                     }
                 }
             }

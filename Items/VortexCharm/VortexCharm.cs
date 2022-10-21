@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -9,7 +8,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.VortexCharm
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class VortexCharm : CombinationsBaseModItem
+    public sealed class VortexCharm : CombinationsBaseModItem
     {
         public static Asset<Texture2D> GlowMaskTexture;
 
@@ -62,8 +61,8 @@ namespace Combinations.Items.VortexCharm
 
         public static int ItemType() => ModContent.ItemType<VortexCharm>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 CharmOfEndurance.CharmOfEndurance.ItemType(),

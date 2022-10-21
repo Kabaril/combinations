@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Combinations.Buffs
 {
-    public class HuntersMarkBuffFour : ModBuff
+    public sealed class HuntersMarkBuffFour : ModBuff
 	{
 		public override void SetStaticDefaults()
 		{

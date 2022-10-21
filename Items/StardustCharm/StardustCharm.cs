@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -9,7 +8,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.StardustCharm
 {
     [AutoloadEquip(EquipType.HandsOn)]
-    public class StardustCharm : CombinationsBaseModItem
+    public sealed class StardustCharm : CombinationsBaseModItem
     {
         public static Asset<Texture2D> GlowMaskTexture;
 
@@ -63,8 +62,8 @@ namespace Combinations.Items.StardustCharm
 
         public static int ItemType() => ModContent.ItemType<StardustCharm>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 CharmOfEndurance.CharmOfEndurance.ItemType(),

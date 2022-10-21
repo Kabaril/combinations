@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.OvergrownTreads
 {
     [AutoloadEquip(EquipType.Shoes)]
-    public class OvergrownTreads : CombinationsBaseModItem
+    public sealed class OvergrownTreads : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -56,8 +55,8 @@ namespace Combinations.Items.OvergrownTreads
 
         public static int ItemType() => ModContent.ItemType<OvergrownTreads>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 GardeningKit.GardeningKit.ItemType(),

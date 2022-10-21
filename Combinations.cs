@@ -2,8 +2,11 @@ using Terraria.ModLoader;
 
 namespace Combinations
 {
-	public class Combinations : Mod
+	public sealed class Combinations : Mod
 	{
+        // Automatically set by tModLoader
+        public static Combinations Instance;
+
         public override void Load()
         {
             Logger.Info("Initializing Combinations");

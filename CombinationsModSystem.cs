@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Combinations
 {
-    public class CombinationsModSystem : ModSystem
+    public sealed class CombinationsModSystem : ModSystem
     {
         public static CombinationsModSystem Instance;
         private ItemWikiState ItemWikiState;

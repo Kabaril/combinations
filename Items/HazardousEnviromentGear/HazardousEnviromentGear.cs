@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
@@ -7,7 +6,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.HazardousEnviromentGear
 {
     [AutoloadEquip(EquipType.Face)]
-    public class HazardousEnviromentGear : CombinationsBaseModItem
+    public sealed class HazardousEnviromentGear : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -67,8 +66,8 @@ namespace Combinations.Items.HazardousEnviromentGear
 
         public static int ItemType() => ModContent.ItemType<HazardousEnviromentGear>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

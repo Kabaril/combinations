@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Combinations.Items.CrownOfLight
 {
-    public class CrownOfLight : ModItem
+    public sealed class CrownOfLight : ModItem
     {
         public override void SetStaticDefaults()
         {

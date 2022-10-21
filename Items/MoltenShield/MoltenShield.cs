@@ -3,14 +3,13 @@ using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
-using System.Collections.Generic;
 using Terraria.GameContent.Creative;
 using System;
 
 namespace Combinations.Items.MoltenShield
 {
     [AutoloadEquip(EquipType.Shield)]
-    public class MoltenShield : CombinationsBaseModItem
+    public sealed class MoltenShield : CombinationsBaseModItem
     {
         internal static int base_defense_value = 2;
 
@@ -121,8 +120,8 @@ namespace Combinations.Items.MoltenShield
             }
         }
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 ItemID.ObsidianShield,

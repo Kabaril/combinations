@@ -15,25 +15,32 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.26] - 2022-10-21
+### Added
+- Slime Shield
+
+### Fixed
+- Performance improvements
+
 ## [0.25] - 2022-10-01
 
 ## [0.24] - 2022-09-04
-## Fixed
+### Fixed
 - Inline Wiki Close Button
 
-## Added
+### Added
 - Inline Wiki Entry for Band of Toughness
 
 ## [0.23] - 2022-09-03
-## Added
+### Added
 - Experimental Inline Wiki (currently only Aglet of the Wind)
 
 ## [0.22] - 2022-08-19
-## Fixed
+### Fixed
 - Magic Arrow fishing chance
 
 ## [0.21] - 2022-08-08
-## Added
+### Added
 - Master Mode crafing Material Crown of Light
 
 ### Changed

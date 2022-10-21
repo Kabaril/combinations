@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Combinations.Buffs
 {
-    public class NebulaCharmBuff : ModBuff
+    public sealed class NebulaCharmBuff : ModBuff
     {
 		public override void SetStaticDefaults()
 		{

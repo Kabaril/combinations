@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,7 +7,7 @@ using Terraria.GameContent.Creative;
 namespace Combinations.Items.TubularMagiluminescence
 {
     [AutoloadEquip(EquipType.Waist)]
-    public class TubularMagiluminescence : CombinationsBaseModItem
+    public sealed class TubularMagiluminescence : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -52,8 +51,8 @@ namespace Combinations.Items.TubularMagiluminescence
 
         public static int ItemType() => ModContent.ItemType<TubularMagiluminescence>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
                 ItemID.Magiluminescence,

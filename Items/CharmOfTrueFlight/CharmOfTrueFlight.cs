@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.CharmOfTrueFlight
 {
-    public class CharmOfTrueFlight : CombinationsBaseModItem
+    public sealed class CharmOfTrueFlight : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -49,8 +48,8 @@ namespace Combinations.Items.CharmOfTrueFlight
 
         public static int ItemType() => ModContent.ItemType<CharmOfTrueFlight>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

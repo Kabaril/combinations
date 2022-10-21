@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
 namespace Combinations.Items.MagicArrow
 {
-    public class MagicArrow : CombinationsBaseModItem
+    public sealed class MagicArrow : CombinationsBaseModItem
     {
         public override void SetStaticDefaults()
         {
@@ -27,8 +26,8 @@ namespace Combinations.Items.MagicArrow
 
         public static int ItemType() => ModContent.ItemType<MagicArrow>();
 
-        public override List<int> IncompatibleAccessories() =>
-            new List<int>()
+        public override int[] IncompatibleAccessories() =>
+            new int[]
             {
                 ItemType(),
             };

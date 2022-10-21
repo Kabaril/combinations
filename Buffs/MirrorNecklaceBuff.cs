@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Combinations.Buffs
 {
-    public class MirrorNecklaceBuff : ModBuff
+    public sealed class MirrorNecklaceBuff : ModBuff
     {
 		public override void SetStaticDefaults()
 		{

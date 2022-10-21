@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace Combinations
 {
-    public class CombinationsGlobalProjectile : GlobalProjectile
+    public sealed class CombinationsGlobalProjectile : GlobalProjectile
     {
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {

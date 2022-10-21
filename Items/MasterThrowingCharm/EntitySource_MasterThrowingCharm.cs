@@ -2,7 +2,7 @@
 
 namespace Combinations.Items.MasterThrowingCharm
 {
-	public class EntitySource_MasterThrowingCharm : IEntitySource
+	public sealed class EntitySource_MasterThrowingCharm : IEntitySource
 	{
 		public string Context { get; }
 

@@ -20,6 +20,7 @@ using Combinations.Items.StardustCharm;
 using System.Collections.Generic;
 using Combinations.Items.WildernessGuide;
 using Combinations.Items.UnholyAbomination;
+using Combinations.Items.CloudOutOfBottle;
 
 namespace Combinations
 {
@@ -311,6 +312,45 @@ namespace Combinations
             base.PreUpdate();
         }
 
+        public override void PostUpdateMiscEffects()
+        {
+            if(Helpers.HasPlayerAccessoryEquipped<CloudOutOfBottle>(Player))
+            {
+                CloudOutOfBottleMovement(Player);
+            }
+            base.PostUpdateMiscEffects();
+        }
+
+        private void CloudOutOfBottleMovement(Player player)
+        {
+            if (player.grappling[0] == -1 && !player.canJumpAgain_Cloud && !player.canJumpAgain_Sandstorm && !player.canJumpAgain_Blizzard && !player.canJumpAgain_Fart && !player.canJumpAgain_Sail && !player.canJumpAgain_Unicorn && !player.canJumpAgain_Santank && !player.canJumpAgain_WallOfFleshGoat && !player.canJumpAgain_Basilisk && player.jump == 0 && player.velocity.Y != 0f && player.rocketTime == 0 && player.wingTime == 0f && !player.mount.Active)
+            {
+                if (player.controlJump)
+                {
+                    float gravity = player.gravity;
+                    float gravity_offset = gravity + 1E-06f;
+                    player.fallStart = (int)(player.position.Y / 16f);
+                    if (player.gravDir == 1f)
+                    {
+                        player.velocity.Y = -gravity_offset;
+                    }
+                    else if (player.gravDir == -1f)
+                    {
+                        player.velocity.Y = gravity_offset;
+                    }
+                    if (player.controlUp)
+                    {
+                        player.velocity.Y = player.velocity.Y - 5f;
+                    }
+                    if (player.controlDown)
+                    {
+                        player.velocity.Y = player.velocity.Y + 5f;
+                    }
+                }
+            }
+        }
+
+
         public override void PostUpdateEquips()
         {
             if(Helpers.HasPlayerItemInInventory<WildernessGuide>(Player))
@@ -372,6 +412,14 @@ namespace Combinations
             {
                 var position = new PlayerDrawLayer.AfterParent(hands_parent);
                 positions.Add(hands_layer, position);
+            }
+
+            AfterFrontAccFrontAccessoryDrawLayer cloud_layer = new AfterFrontAccFrontAccessoryDrawLayer();
+            PlayerDrawLayer cloud_parent = positions.Keys.First(x => x.Name == "FrontAccFront");
+            if (cloud_parent is not null)
+            {
+                var position = new PlayerDrawLayer.AfterParent(cloud_parent);
+                positions.Add(cloud_layer, position);
             }
             base.ModifyDrawLayerOrdering(positions);
         }

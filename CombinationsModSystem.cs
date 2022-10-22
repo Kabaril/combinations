@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 using Combinations.UI;
 using Terraria.UI;
 using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace Combinations
 {
@@ -87,6 +88,17 @@ namespace Combinations
             recipe11.Register();
 
             base.AddRecipes();
+        }
+
+        public override void AddRecipeGroups()
+        {
+            if (!RecipeGroup.recipeGroupIDs.ContainsKey(nameof(ItemID.CloudinaBottle)))
+            {
+                RecipeGroup group = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CloudinaBottle)}", ItemID.SandstorminaBottle, ItemID.CloudinaBottle, ItemID.FartinaJar, ItemID.BlizzardinaBottle, ItemID.TsunamiInABottle);
+                RecipeGroup.RegisterGroup(nameof(ItemID.CloudinaBottle), group);
+            }
+
+            base.AddRecipeGroups();
         }
 
         public override void Load()

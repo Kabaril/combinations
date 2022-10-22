@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.27] - 2022-10-22
+### Added
+- Cloud out of Bottle
+
 ## [0.26] - 2022-10-21
 ### Added
 - Slime Shield

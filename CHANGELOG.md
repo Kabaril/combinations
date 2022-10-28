@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.28] - 2022-10-26
+### Removed
+- Experimental Inline Wiki (moved to external Mod)
+
 ## [0.27] - 2022-10-22
 ### Added
 - Cloud out of Bottle

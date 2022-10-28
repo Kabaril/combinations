@@ -25,6 +25,8 @@ Hell Boots
 Builders Pack
 Unholy Abomination
 
+You can try the new Inline Wiki with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880145840] Inline Wiki Lib [/url]
+
 You can read more about these Accessories on the wiki: https://github.com/Kabaril/combinations/wiki
 
 

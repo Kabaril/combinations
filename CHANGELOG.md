@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.29] - 2022-10-31
+### Added
+- Inline Wiki Entries for Bone Pile, Hunters Mark, Magic Arrow and Mirror Necklace
+
 ## [0.28] - 2022-10-26
 ### Removed
 - Experimental Inline Wiki (moved to external Mod)

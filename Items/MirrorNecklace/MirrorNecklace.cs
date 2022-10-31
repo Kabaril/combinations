@@ -16,6 +16,19 @@ namespace Combinations.Items.MirrorNecklace
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
+        public static readonly string InlineWikiLibValue = @"
+## Mirror Necklace ![Combinations/Items/MirrorNecklace/MirrorNecklace]t-4
+
+The Mirror Necklace combines the effects of the Pocket Mirror and Pygmy Necklace.
+
+Additionally when hitting a enemy with a whip it grants a tag damage bonus of 10.
+
+The tag damage bonus applies even if the whip does not itself have tag damage.
+
+### Crafting
+
+![Combinations/Items/MirrorNecklace/MirrorNecklace] = ![Terraria/Images/Item_1158] + ![Terraria/Images/Item_3781]t-4";
+
         public override void SetDefaults()
         {
             Item.accessory = true;

@@ -23,6 +23,17 @@ namespace Combinations.Items.BonePile
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
+        public static readonly string InlineWikiLibValue = @"## Bone Pile ![Combinations/Items/BonePile/BonePile]t-4
+
+The Bone Pile is an Expert Mode-exclusive item.
+
+The Bone Pile combines the effects of the Bone Helm and Bone Glove, without losing or adding a effect.
+
+### Crafting
+
+![Combinations/Items/BonePile/BonePile] = ![Terraria/Images/Item_5100] + ![Terraria/Images/Item_3245]
+";
+
         public override void SetDefaults()
         {
             Item.accessory = true;

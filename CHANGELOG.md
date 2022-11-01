@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.30] - 2022-11-01
+### Fixed
+- Slime Shield update bug
+
 ## [0.29] - 2022-10-31
 ### Added
 - Inline Wiki Entries for Bone Pile, Hunters Mark, Magic Arrow and Mirror Necklace

@@ -74,7 +74,7 @@ namespace Combinations.Items.SlimeShield
             player.npcTypeNoAggro[NPCID.HoppinJack] = true;
             player.npcTypeNoAggro[NPCID.GoldenSlime] = true;
             player.npcTypeNoAggro[NPCID.SlimeSpiked] = true;
-            player.npcTypeNoAggro[676] = true;
+            //player.npcTypeNoAggro[676] = true;
             player.dashType = 2;
         }
 

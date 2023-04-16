@@ -16,6 +16,7 @@ namespace Combinations.Items.CharmOfRangers
                 "5% ranged critical strike chance");
             DisplayName.SetDefault("Charm of Rangers");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

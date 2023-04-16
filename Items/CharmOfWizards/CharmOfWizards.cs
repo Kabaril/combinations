@@ -16,6 +16,7 @@ namespace Combinations.Items.CharmOfWizards
                 "5% increased magic damage");
             DisplayName.SetDefault("Charm of Wizards");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

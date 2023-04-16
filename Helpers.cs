@@ -14,6 +14,7 @@ namespace Combinations
             _Calamity_Mod_Player_Type_Is_Scanned = false;
             _Calamity_Mod_Player_Type = null;
             _Calamity_Mod_Player_Method = null;
+            _asymmetricEquipsMod = null;
         }
 
         public static bool HasPlayerItemInInventory(Player player, int type)
@@ -249,6 +250,41 @@ namespace Combinations
                 _Calamity_Mod_Player_Method = method.MakeGenericMethod(calamity_player_type);
             }
             return _Calamity_Mod_Player_Method;
+        }
+
+        private static Mod _asymmetricEquipsMod;
+
+        public static void AddAsymmetricEquipHidden(ModItem item, EquipType type)
+        {
+            if (_asymmetricEquipsMod == null && !ModLoader.TryGetMod("AsymmetricEquips", out _asymmetricEquipsMod))
+            {
+                return;
+            }
+
+            int equipSlot = type switch
+            {
+                EquipType.Head => item.Item.headSlot,
+                EquipType.Body => item.Item.bodySlot,
+                EquipType.Legs => item.Item.legSlot,
+                EquipType.HandsOn => item.Item.handOnSlot,
+                EquipType.HandsOff => item.Item.handOffSlot,
+                EquipType.Back => item.Item.backSlot,
+                EquipType.Front => item.Item.frontSlot,
+                EquipType.Shoes => item.Item.shoeSlot,
+                EquipType.Waist => item.Item.waistSlot,
+                EquipType.Wings => item.Item.wingSlot,
+                EquipType.Shield => item.Item.shieldSlot,
+                EquipType.Neck => item.Item.neckSlot,
+                EquipType.Face => item.Item.faceSlot,
+                EquipType.Balloon => item.Item.balloonSlot,
+                EquipType.Beard => item.Item.beardSlot,
+                _ => throw new NotImplementedException(),
+            };
+
+            if (equipSlot != -1)
+            {
+                _asymmetricEquipsMod.Call("AddEquip", type, equipSlot);
+            }
         }
     }
 }

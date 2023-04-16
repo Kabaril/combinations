@@ -24,6 +24,7 @@ namespace Combinations.Items.StardustCharm
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/StardustCharm/StardustCharm_HandsOn_Glow");
             }
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void Unload()
@@ -77,5 +78,10 @@ namespace Combinations.Items.StardustCharm
                 NebulaCharm.NebulaCharm.ItemType(),
                 MasterThrowingCharm.MasterThrowingCharm.ItemType()
             };
+
+        public override void EquipFrameEffects(Player player, EquipType type)
+        {
+            player.GetModPlayer<CombinationsPlayer>().handsOnGlowMask = GlowMaskTexture;
+        }
     }
 }

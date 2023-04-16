@@ -15,6 +15,7 @@ namespace Combinations.Items.CharmOfWarriors
                 "5% increased melee damage");
             DisplayName.SetDefault("Charm of Warriors");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

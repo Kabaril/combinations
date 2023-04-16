@@ -21,6 +21,8 @@ using System.Collections.Generic;
 using Combinations.Items.WildernessGuide;
 using Combinations.Items.UnholyAbomination;
 using Combinations.Items.CloudOutOfBottle;
+using ReLogic.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Combinations
 {
@@ -30,7 +32,14 @@ namespace Combinations
 
         public int NebulaCharmCharge = 0;
 
+        public Asset<Texture2D> handsOnGlowMask;
+
         private static int[] RecoveryBuffAccessories => new int[] { OvergrownTreads.ItemType(), JungleBoots.ItemType() };
+
+        public override void ResetEffects()
+        {
+            handsOnGlowMask = null;
+        }
 
         public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
         {

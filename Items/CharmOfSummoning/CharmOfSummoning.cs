@@ -16,6 +16,7 @@ namespace Combinations.Items.CharmOfSummoning
                 "8% increased whip speed");
             DisplayName.SetDefault("Charm of Summoning");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

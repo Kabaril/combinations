@@ -40,6 +40,7 @@ does not slow or stop when the player is moving or being attacked.
             {
                 base_regen_value = regenerationBand.lifeRegen;
             }
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

@@ -24,6 +24,7 @@ namespace Combinations.Items.VortexCharm
             {
                 GlowMaskTexture = ModContent.Request<Texture2D>("Combinations/Items/VortexCharm/VortexCharm_HandsOn_Glow");
             }
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void Unload()
@@ -76,5 +77,10 @@ namespace Combinations.Items.VortexCharm
                 NebulaCharm.NebulaCharm.ItemType(),
                 MasterThrowingCharm.MasterThrowingCharm.ItemType()
             };
+
+        public override void EquipFrameEffects(Player player, EquipType type)
+        {
+            player.GetModPlayer<CombinationsPlayer>().handsOnGlowMask = GlowMaskTexture;
+        }
     }
 }

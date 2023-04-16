@@ -17,6 +17,7 @@ namespace Combinations.Items.MasterThrowingCharm
                 "20% increased throwing velocity\n" +
                 "Throws two projectiles at a time");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

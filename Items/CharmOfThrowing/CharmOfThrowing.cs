@@ -18,6 +18,7 @@ namespace Combinations.Items.CharmOfThrowing
                 "'The path ahead is unclear'");
             DisplayName.SetDefault("Charm of Throwing");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+            Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }
 
         public override void SetDefaults()

@@ -15,6 +15,13 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.31] - 2023-04-18
+### Added
+- Added basic support for the mod "Asymmetric Equips" (much thanks to @Antirhinnum)
+
+### Fixed
+- Hands-On Glow Mask of the Solar, Vortex, Nebula and Stardust Charms no longer appear if the charm is not visible (much thanks to @Antirhinnum)
+
 ## [0.30] - 2022-11-01
 ### Fixed
 - Slime Shield update bug

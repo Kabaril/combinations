@@ -14,11 +14,6 @@ namespace Combinations.Items.VortexCharm
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased ranged damage\n" +
-                "5% ranged critical strike chance\n" +
-                "Applies random effects when striking enemies");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {

@@ -10,12 +10,6 @@ namespace Combinations.Items.HazardousEnviromentGear
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Grants the ability to swim and greatly extends underwater breathing\n" +
-            "Provides extra mobility on ice\n" +
-            "Generates a very subtle glow which becomes more vibrant underwater\n" +
-            "Grants immunity to fire blocks, poison and fall damage\n" +
-            "Releases bees and douses the user in honey when damaged\n" +
-            "'H.E.V. Gear'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

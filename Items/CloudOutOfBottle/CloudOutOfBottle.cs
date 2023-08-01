@@ -13,7 +13,6 @@ namespace Combinations.Items.CloudOutOfBottle
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows the owner to float");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {

@@ -2,28 +2,24 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace Combinations.Items.HellBoots
 {
     [AutoloadEquip(EquipType.Shoes)]
     public sealed class HellBoots : CombinationsBaseModItem
     {
+        public override LocalizedText Tooltip {
+            get {
+                if(Helpers.IsCalamityActive()) {
+                    return Language.GetOrRegister("Mods.Combinations.Interop.Calamity.HellBoots.Tooltip");
+                }
+                return Language.GetOrRegister("Mods.Combinations.Items.HellBoots.Tooltip");
+            }
+        }
+
         public override void SetStaticDefaults()
         {
-            string tooltip = "Allows flight\n" +
-                "Provides the ability to walk on water, honey & lava\n" +
-                "Grants immunity to fire blocks and 7 seconds of immunity to lava\n" +
-                "Reduces damage from touching lava\n" +
-                "Leaves a trail of flames in your wake\n" +
-                "If worn in the Underworld, grants minor increase to damage, attack speed, critical strike chance,\n" +
-                "life regeneration and defense";
-            if(Helpers.IsCalamityActive())
-            {
-                tooltip += "\nGrants immunity to the Burning and On Fire! debuffs";
-                tooltip += "\nMultiplies all fire-based debuff damage by 1.5";
-                tooltip += "\nAll attacks inflict Hellfire";
-            }
-            Tooltip.SetDefault(tooltip);
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

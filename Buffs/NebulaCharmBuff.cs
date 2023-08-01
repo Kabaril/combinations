@@ -8,8 +8,6 @@ namespace Combinations.Buffs
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Galactic Power");
-			Description.SetDefault("Magic Power is increasing");
 			Main.debuff[Type] = false;
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;

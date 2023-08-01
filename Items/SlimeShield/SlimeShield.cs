@@ -11,9 +11,6 @@ namespace Combinations.Items.SlimeShield
         internal static int base_defense_value = 2;
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slimes become friendly\n" +
-                "Allows the player to dash into the enemy\n" +
-                "Double tap a direction");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Item eoc_shield = Helpers.GetInitilizedDummyItem(ItemID.EoCShield);
             if (eoc_shield is not null)

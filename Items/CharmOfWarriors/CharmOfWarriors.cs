@@ -10,10 +10,6 @@ namespace Combinations.Items.CharmOfWarriors
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased melee damage");
-            DisplayName.SetDefault("Charm of Warriors");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }

@@ -9,9 +9,6 @@ namespace Combinations.Items.HuntersMark
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases pickup range for items\n" +
-                "Marks enemies in ranged combat\n" +
-                "'Relentless he stalks his prey'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

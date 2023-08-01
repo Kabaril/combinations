@@ -13,8 +13,6 @@ namespace Combinations.Buffs
 
         public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hunters Mark");
-			Description.SetDefault("The hunt begins");
 			Main.debuff[Type] = true;
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
@@ -34,13 +32,7 @@ namespace Combinations.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            int def = player.statDefense;
-            def -= 5;
-            if (def < 0)
-            {
-                def = 0;
-            }
-            player.statDefense = def;
+            player.statDefense -= 5;
             base.Update(player, ref buffIndex);
         }
     }

@@ -10,7 +10,6 @@ namespace Combinations.Items.UnholyAbomination
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Strong enough to destroy Demon Altars");
             ItemID.Sets.CatchingTool[Type] = true;
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }

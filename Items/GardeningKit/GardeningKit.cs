@@ -9,10 +9,6 @@ namespace Combinations.Items.GardeningKit
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows the collection of Vine Rope from vines\n" +
-                "Flowers grow on the grass you walk on\n" +
-                "Does not decrease drop rate when breaking plants\n" +
-                "'Now where did I put that gnome?'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

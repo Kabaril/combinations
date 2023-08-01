@@ -11,12 +11,6 @@ namespace Combinations.Items.ArchmagiLuminarium
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("8% reduced mana usage\n" +
-                "Automatically use mana potions when needed\n" +
-                "Causes stars to fall after taking damage\n" +
-                "Stars restore mana when collected\n" +
-                "Increases movement speed and acceleration\n" +
-                "Provides light when worn");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

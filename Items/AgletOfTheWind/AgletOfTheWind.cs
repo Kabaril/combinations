@@ -21,8 +21,6 @@ The Aglet Of The Wind can be further upgraded into the Lightning Boots, like its
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("12% increased movement speed");
-            DisplayName.SetDefault("Aglet of the Wind");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

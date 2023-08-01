@@ -10,11 +10,6 @@ namespace Combinations.Items.CharmOfWizards
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "Increases maximum mana by 20\n" +
-                "5% increased magic damage");
-            DisplayName.SetDefault("Charm of Wizards");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }

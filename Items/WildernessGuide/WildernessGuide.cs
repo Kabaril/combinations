@@ -9,9 +9,6 @@ namespace Combinations.Items.WildernessGuide
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows the collection of Vine Rope from vines\n" +
-                "Prevents you from hurting critters while in the inventory\n" +
-                "'Does not explain the forces of nature'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

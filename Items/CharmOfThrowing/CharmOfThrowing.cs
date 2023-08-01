@@ -10,13 +10,6 @@ namespace Combinations.Items.CharmOfThrowing
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "8% increased throwing damage\n" +
-                "8% increased throwing critical strike chance\n" +
-                "20% increased throwing velocity\n" +
-                "'The path ahead is unclear'");
-            DisplayName.SetDefault("Charm of Throwing");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }

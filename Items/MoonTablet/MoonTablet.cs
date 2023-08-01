@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace Combinations.Items.MoonTablet
 {
@@ -9,17 +10,20 @@ namespace Combinations.Items.MoonTablet
     {
         internal static int? NightwitherDebuffType = null;
 
+        public override LocalizedText Tooltip {
+            get {
+                if(Helpers.IsCalamityActive()) {
+                    return Language.GetOrRegister("Mods.Combinations.Interop.Calamity.MoonTablet.Tooltip");
+                }
+                return Language.GetOrRegister("Mods.Combinations.Items.MoonTablet.Tooltip");
+            }
+        }
+
         public override void SetStaticDefaults()
         {
-            string tooltip = "Turns the holder into a werewolf at night\n" +
-                "If worn during the night, grants minor increase to damage, melee speed, critical strike chance,\n" +
-                "life regeneration, defense, mining speed, and minion knockback";
-            if (ModContent.TryFind("CalamityMod/Nightwither", out ModBuff NightwitherDebuff))
-            {
+            if (ModContent.TryFind("CalamityMod/Nightwither", out ModBuff NightwitherDebuff)) {
                 NightwitherDebuffType = NightwitherDebuff.Type;
-                tooltip += "\nGrants immunity to Nightwither";
             }
-            Tooltip.SetDefault(tooltip);
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,7 +35,7 @@ namespace Combinations.Items.MoonTablet
             Item.value = Item.sellPrice(0, 10, 50);
             Item.rare = ItemRarityID.LightPurple;
             Item.stack = 1;
-            Item.canBePlacedInVanityRegardlessOfConditions = true;
+            Item.hasVanityEffects = true;
         }
 
         public override void AddRecipes()

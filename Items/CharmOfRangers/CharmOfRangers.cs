@@ -10,11 +10,6 @@ namespace Combinations.Items.CharmOfRangers
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased ranged damage\n" +
-                "5% ranged critical strike chance");
-            DisplayName.SetDefault("Charm of Rangers");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }

@@ -26,9 +26,6 @@ does not slow or stop when the player is moving or being attacked.
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "'How tough are you?'");
-            DisplayName.SetDefault("Band of Toughness");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Item shackle = Helpers.GetInitilizedDummyItem(ItemID.Shackle);
             if(shackle is not null)

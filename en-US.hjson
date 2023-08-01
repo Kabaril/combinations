@@ -1,0 +1,482 @@
+Mods: {
+	Combinations: {
+		Configs: {
+			CombinationsConfig: {
+				Headers: {
+					Visual: Visual
+					Gameplay: Gameplay
+				}
+
+				HideMoltenShieldRing: {
+					Label: Hide Molten Shield Inferno
+					Tooltip: Hide Ring of Inferno effect of Molten Shield
+				}
+
+				DisableVineRopeForBoots: {
+					Label: Disable Vine Rope Collection for Boots
+					Tooltip: No more Vine Rope clogging up your Inventory!
+				}
+
+				DisplayName: Combinations Config
+			}
+		}
+
+		Misc.MasterModeOnly: Master Mode only
+
+		Interop: {
+			Calamity: {
+				HellBoots.Tooltip:
+					'''
+					Allows flight
+					Provides the ability to walk on water, honey & lava
+					Grants immunity to fire blocks and 7 seconds of immunity to lava
+					Reduces damage from touching lava
+					Leaves a trail of flames in your wake
+					If worn in the Underworld, grants minor increase to damage, attack speed, critical strike chance,
+					life regeneration and defense
+					Grants immunity to the Burning and On Fire! debuffs
+					Multiplies all fire-based debuff damage by 1.5
+					All attacks inflict Hellfire
+					'''
+				MoonTablet.Tooltip:
+					'''
+					Turns the holder into a werewolf at night
+					If worn during the night, grants minor increase to damage, melee speed, critical strike chance,
+					life regeneration, defense, mining speed, and minion knockback
+					Grants immunity to Nightwither
+					'''
+			}
+		}
+
+		Buffs: {
+			HuntersMarkBuffFour: {
+				DisplayName: Hunters Mark
+				Description: The hunt begins
+			}
+
+			HuntersMarkBuffOne: {
+				DisplayName: Hunters Mark
+				Description: The hunt begins
+			}
+
+			HuntersMarkBuffThree: {
+				DisplayName: Hunters Mark
+				Description: The hunt begins
+			}
+
+			HuntersMarkBuffTwo: {
+				DisplayName: Hunters Mark
+				Description: The hunt begins
+			}
+
+			MirrorNecklaceBuff: {
+				DisplayName: Mirror Hit
+				Description: Tagged by Mirror Necklace
+			}
+
+			NebulaCharmBuff: {
+				DisplayName: Galactic Power
+				Description: Magic Power is increasing
+			}
+
+			StardustCharmBuff: {
+				DisplayName: Stardust Charm
+				Description: Tagged by Stardust Charm
+			}
+		}
+
+		Items: {
+			AgletOfTheWind: {
+				DisplayName: Aglet of the Wind
+				Tooltip: 12% increased movement speed
+			}
+
+			ArchmagiLuminarium: {
+				DisplayName: Archmagi Luminarium
+				Tooltip:
+					'''
+					8% reduced mana usage
+					Automatically use mana potions when needed
+					Causes stars to fall after taking damage
+					Stars restore mana when collected
+					Increases movement speed and acceleration
+					Provides light when worn
+					'''
+			}
+
+			BandOfToughness: {
+				DisplayName: Band of Toughness
+				Tooltip:
+					'''
+					Slowly regenerates life
+					'How tough are you?'
+					'''
+			}
+
+			BonePile: {
+				DisplayName: Bone Pile
+				Tooltip:
+					'''
+					Shoots crossbones at enemies while you are attacking
+					Summons shadow hands to attack your foes
+					'You try not to think about their origin'
+					'''
+			}
+
+			BuildersPack: {
+				DisplayName: Builders Pack
+				Tooltip:
+					'''
+					Increases mining speed by 25%
+					Increases block & wall placement speed
+					Automatically paints placed objects
+					Increases block placement & tool range by 4
+					Hold UP to reach higher
+					'''
+			}
+
+			CharmOfEndurance: {
+				DisplayName: Charm of Endurance
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					'''
+			}
+
+			CharmOfRangers: {
+				DisplayName: Charm of Rangers
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased ranged damage
+					5% ranged critical strike chance
+					'''
+			}
+
+			CharmOfSummoning: {
+				DisplayName: Charm of Summoning
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased summon damage
+					8% increased whip speed
+					'''
+			}
+
+			CharmOfThrowing: {
+				DisplayName: Charm of Throwing
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					8% increased throwing damage
+					8% increased throwing critical strike chance
+					20% increased throwing velocity
+					'The path ahead is unclear'
+					'''
+			}
+
+			CharmOfTrueFlight: {
+				DisplayName: Charm of True Flight
+				Tooltip:
+					'''
+					Grants infinite flight
+					Increases flight and jump mobility
+					'Flying is like breathing'
+					'''
+			}
+
+			CharmOfWarriors: {
+				DisplayName: Charm of Warriors
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased melee damage
+					'''
+			}
+
+			CharmOfWizards: {
+				DisplayName: Charm of Wizards
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					Increases maximum mana by 20
+					5% increased magic damage
+					'''
+			}
+
+			CloudOutOfBottle: {
+				DisplayName: Cloud Out Of Bottle
+				Tooltip: Allows the owner to float
+			}
+
+			CrownOfLight: {
+				DisplayName: Crown of Light
+				Tooltip: ""
+			}
+
+			DeadlyEnviromentGear: {
+				DisplayName: Deadly Enviroment Gear
+				Tooltip:
+					'''
+					Grants the ability to swim and greatly extends underwater breathing
+					Provides extra mobility on ice
+					Generates a very subtle glow which becomes more vibrant underwater
+					Grants immunity to fire blocks, poison, bleeding and fall damage
+					Releases bees and douses the user in honey when damaged
+					Reduces damage from touching lava
+					Grants a recharging protective barrier
+					'''
+			}
+
+			DruidTreads: {
+				DisplayName: Druid Treads
+				Tooltip:
+					'''
+					Allows flight
+					The wearer can run super fast
+					Allows the collection of Vine Rope from vines
+					Flowers grow on the grass you walk on
+					Does not decrease drop rate when breaking plants
+					Increases alchemy plant collection
+					'''
+			}
+
+			GardeningBoots: {
+				DisplayName: Gardening Boots
+				Tooltip:
+					'''
+					Allows flight
+					The wearer can run super fast
+					Allows the collection of Vine Rope from vines
+					Flowers grow on the grass you walk on
+					Does not decrease drop rate when breaking plants
+					'''
+			}
+
+			GardeningKit: {
+				DisplayName: Gardening Kit
+				Tooltip:
+					'''
+					Allows the collection of Vine Rope from vines
+					Flowers grow on the grass you walk on
+					Does not decrease drop rate when breaking plants
+					'Now where did I put that gnome?'
+					'''
+			}
+
+			HazardousEnviromentGear: {
+				DisplayName: Hazardous Enviroment Gear
+				Tooltip:
+					'''
+					Grants the ability to swim and greatly extends underwater breathing
+					Provides extra mobility on ice
+					Generates a very subtle glow which becomes more vibrant underwater
+					Grants immunity to fire blocks, poison and fall damage
+					Releases bees and douses the user in honey when damaged
+					'H.E.V. Gear'
+					'''
+			}
+
+			HellBoots: {
+				DisplayName: Hell Boots
+				Tooltip:
+					'''
+					Allows flight
+					Provides the ability to walk on water, honey & lava
+					Grants immunity to fire blocks and 7 seconds of immunity to lava
+					Reduces damage from touching lava
+					Leaves a trail of flames in your wake
+					If worn in the Underworld, grants minor increase to damage, attack speed, critical strike chance,
+					life regeneration and defense
+					'''
+			}
+
+			HuntersMark: {
+				DisplayName: Hunters Mark
+				Tooltip:
+					'''
+					Increases pickup range for items
+					Marks enemies in ranged combat
+					'Relentless he stalks his prey'
+					'''
+			}
+
+			JungleBoots: {
+				DisplayName: Jungle Boots
+				Tooltip:
+					'''
+					Allows flight
+					The wearer can run super fast
+					Allows the collection of Vine Rope from vines
+					Flowers grow on the grass you walk on
+					Does not decrease drop rate when breaking plants
+					Increases alchemy plant collection
+					Increases health and mana recovery
+					Summons spores over time that will damage enemies
+					'''
+			}
+
+			MagicArrow: {
+				DisplayName: Magic Arrow
+				Tooltip:
+					'''
+					Flight can be extended for Mana
+					'Fly with me - and be free'
+					'''
+			}
+
+			MasterThrowingCharm: {
+				DisplayName: Master Throwing Charm
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					8% increased throwing damage
+					8% increased throwing critical strike chance
+					20% increased throwing velocity
+					Throws two projectiles at a time
+					'''
+			}
+
+			MirrorNecklace: {
+				DisplayName: Mirror Necklace
+				Tooltip:
+					'''
+					Increases your max number of minions by 1
+					Immunity to petrification
+					Increases summon tag damage
+					'''
+			}
+
+			MoltenShield: {
+				DisplayName: Molten Shield
+				Tooltip:
+					'''
+					Melee attacks inflict fire damage
+					Grants immunity to fire blocks
+					Reduces damage from touching lava
+					Grants immunity to knockback
+					Nearby enemies are ignited
+					'Any Hellknight needs one'
+					'''
+			}
+
+			MoonTablet: {
+				DisplayName: Moon Tablet
+				Tooltip:
+					'''
+					Turns the holder into a werewolf at night
+					If worn during the night, grants minor increase to damage, melee speed, critical strike chance,
+					life regeneration, defense, mining speed, and minion knockback
+					'''
+			}
+
+			NebulaCharm: {
+				DisplayName: Nebula Charm
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					Increases maximum mana by 20
+					5% increased magic damage
+					Grants a damage charging buff
+					'''
+			}
+
+			OvergrownTreads: {
+				DisplayName: Overgrown Treads
+				Tooltip:
+					'''
+					Allows flight
+					The wearer can run super fast
+					Allows the collection of Vine Rope from vines
+					Flowers grow on the grass you walk on
+					Does not decrease drop rate when breaking plants
+					Increases alchemy plant collection
+					Increases health and mana recovery
+					'''
+			}
+
+			SlimeShield: {
+				DisplayName: Slime Shield
+				Tooltip:
+					'''
+					Slimes become friendly
+					Allows the player to dash into the enemy
+					Double tap a direction
+					'''
+			}
+
+			SolarCharm: {
+				DisplayName: Solar Charm
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased melee damage
+					Attacks deal more damage based on proximity
+					'Come a bit closer'
+					'''
+			}
+
+			StardustCharm: {
+				DisplayName: Stardust Charm
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased summon damage
+					8% increased whip speed
+					Minion attacks will make struck enemies vulnerable to you
+					'''
+			}
+
+			TubularMagiluminescence: {
+				DisplayName: Tubular Magiluminescence
+				Tooltip:
+					'''
+					Grants the ability to float in water
+					Increases movement speed and acceleration
+					Provides light when worn
+					'How exactly does this float?'
+					'''
+			}
+
+			UnholyAbomination: {
+				DisplayName: Unholy Abomination
+				Tooltip: Strong enough to destroy Demon Altars
+			}
+
+			VortexCharm: {
+				DisplayName: Vortex Charm
+				Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					5% increased ranged damage
+					5% ranged critical strike chance
+					Applies random effects when striking enemies
+					'''
+			}
+
+			WildernessGuide: {
+				DisplayName: Wilderness Guide
+				Tooltip:
+					'''
+					Allows the collection of Vine Rope from vines
+					Prevents you from hurting critters while in the inventory
+					'Does not explain the forces of nature'
+					'''
+			}
+		}
+
+		HellBoots.Tooltip: Mods.Combinations.HellBoots.Tooltip
+		MoonTablet.Tooltip: Mods.Combinations.MoonTablet.Tooltip
+	}
+}

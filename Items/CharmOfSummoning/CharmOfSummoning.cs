@@ -10,11 +10,6 @@ namespace Combinations.Items.CharmOfSummoning
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased summon damage\n" +
-                "8% increased whip speed");
-            DisplayName.SetDefault("Charm of Summoning");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
         }

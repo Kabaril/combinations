@@ -14,11 +14,6 @@ namespace Combinations.Items.StardustCharm
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased summon damage\n" +
-                "8% increased whip speed\n" +
-                "Minion attacks will make struck enemies vulnerable to you");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {

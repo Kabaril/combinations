@@ -10,11 +10,6 @@ namespace Combinations.Items.BuildersPack
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases mining speed by 25%\n" +
-                "Increases block & wall placement speed\n" +
-                "Automatically paints placed objects\n" +
-                "Increases block placement & tool range by 4\n" +
-                "Hold UP to reach higher");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -10,9 +10,6 @@ namespace Combinations.Items.MirrorNecklace
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increases your max number of minions by 1\n" +
-                "Immunity to petrification\n" +
-                "Increases summon tag damage");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -15,6 +15,13 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.32] - 2023-04-18
+### Fixed
+- tModLoader API Changes
+
+### Changed
+- Translations are now in en-US.hjson
+
 ## [0.31] - 2023-04-18
 ### Added
 - Added basic support for the mod "Asymmetric Equips" (much thanks to @Antirhinnum)

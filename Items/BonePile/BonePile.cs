@@ -17,9 +17,6 @@ namespace Combinations.Items.BonePile
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Shoots crossbones at enemies while you are attacking\n" +
-                "Summons shadow hands to attack your foes\n" +
-                "'You try not to think about their origin'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -9,8 +9,6 @@ namespace Combinations.Items.MagicArrow
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Flight can be extended for Mana\n" +
-                "'Fly with me - and be free'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

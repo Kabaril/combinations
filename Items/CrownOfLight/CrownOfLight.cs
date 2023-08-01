@@ -8,7 +8,6 @@ namespace Combinations.Items.CrownOfLight
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Crown of Light");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

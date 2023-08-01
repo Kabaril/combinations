@@ -14,11 +14,6 @@ namespace Combinations.Items.SolarCharm
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "5% increased melee damage\n" +
-                "Attacks deal more damage based on proximity\n" +
-                "'Come a bit closer'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {

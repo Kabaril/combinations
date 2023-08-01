@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace Combinations.Items.CharmOfTrueFlight
 {
@@ -9,10 +10,6 @@ namespace Combinations.Items.CharmOfTrueFlight
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Grants infinite flight\n" +
-            "Increases flight and jump mobility\n" +
-            "'Flying is like breathing'");
-            DisplayName.SetDefault("Charm of True Flight");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -35,7 +32,7 @@ namespace Combinations.Items.CharmOfTrueFlight
             recipe.AddIngredient(ItemID.EmpressFlightBooster);
             recipe.AddIngredient<CrownOfLight.CrownOfLight>();
             recipe.AddTile(TileID.TinkerersWorkbench);
-            recipe.AddCondition(Terraria.Localization.NetworkText.FromLiteral("Master Mode only"), (r) => Main.masterMode);
+            recipe.AddCondition(Language.GetOrRegister("Mods.Combinations.Misc.MasterModeOnly"), () => Main.masterMode);
             recipe.Register();
         }
 

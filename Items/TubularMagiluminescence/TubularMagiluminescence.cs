@@ -11,10 +11,6 @@ namespace Combinations.Items.TubularMagiluminescence
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Grants the ability to float in water\n" +
-                "Increases movement speed and acceleration\n" +
-                "Provides light when worn\n" +
-                "'How exactly does this float?'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

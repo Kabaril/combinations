@@ -15,12 +15,6 @@ namespace Combinations.Items.MoltenShield
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Melee attacks inflict fire damage\n" +
-                "Grants immunity to fire blocks\n" +
-                "Reduces damage from touching lava\n" +
-                "Grants immunity to knockback\n"+
-                "Nearby enemies are ignited\n" +
-                "'Any Hellknight needs one'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Item skull_rose = Helpers.GetInitilizedDummyItem(ItemID.MoltenSkullRose);
             if(skull_rose is not null)
@@ -113,8 +107,10 @@ namespace Combinations.Items.MoltenShield
                     player2.Hurt(PlayerDeathReason.LegacyEmpty(), damage, 0, pvp: true);
                     if (Main.netMode != NetmodeID.SinglePlayer)
                     {
-                        PlayerDeathReason reason = PlayerDeathReason.ByOther(16);
-                        NetMessage.SendPlayerHurt(l, reason, damage, 0, critical: false, pvp: true, -1);
+                        Player.HurtInfo hurtInfo = new Player.HurtInfo();
+                        hurtInfo.PvP = true;
+                        hurtInfo.Damage = damage;
+                        NetMessage.SendPlayerHurt(l, hurtInfo, -1);
                     }
                 }
             }

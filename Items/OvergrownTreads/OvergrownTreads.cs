@@ -10,13 +10,6 @@ namespace Combinations.Items.OvergrownTreads
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows flight\n" +
-                "The wearer can run super fast\n" +
-                "Allows the collection of Vine Rope from vines\n" +
-                "Flowers grow on the grass you walk on\n" +
-                "Does not decrease drop rate when breaking plants\n" +
-                "Increases alchemy plant collection\n" +
-                "Increases health and mana recovery");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

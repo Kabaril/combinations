@@ -14,11 +14,6 @@ namespace Combinations.Items.NebulaCharm
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Slowly regenerates life\n" +
-                "Reduces the cooldown of healing potions by 25%\n" +
-                "Increases maximum mana by 20\n" +
-                "5% increased magic damage\n" +
-                "Grants a damage charging buff");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             if (Main.netMode != NetmodeID.Server)
             {

@@ -15,7 +15,7 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
-## [0.32] - 2023-04-18
+## [0.32] - 2023-08-01
 ### Fixed
 - tModLoader API Changes
 

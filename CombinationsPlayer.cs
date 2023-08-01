@@ -103,13 +103,13 @@ namespace Combinations
             return modifier;
         }
 
-        public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
+        public override void ModifyHitNPCWithItem(Item item, NPC target, ref NPC.HitModifiers modifiers)
         {
             // True Melee Attacks
             if (Helpers.HasPlayerAccessoryEquipped<SolarCharm>(Player))
             {
                 // 100% bonus
-                damage *= 2;
+                modifiers.SourceDamage *= 2;
             }
             if(item.ModItem is UnholyAbomination)
             {
@@ -118,10 +118,10 @@ namespace Combinations
                     target.AddBuff(24, 180);
                 }
             }
-            base.ModifyHitNPC(item, target, ref damage, ref knockback, ref crit);
+            base.ModifyHitNPCWithItem(item, target, ref modifiers);
         }
 
-        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
         {
             //Any whip can apply MirrorNecklaceBuff even if it does not have a tag itself
             if (Helpers.HasPlayerAccessoryEquipped<MirrorNecklace>(Player) && ProjectileID.Sets.IsAWhip[proj.type])
@@ -136,7 +136,7 @@ namespace Combinations
                 }
                 if(target.HasBuff<MirrorNecklaceBuff>())
                 {
-                    damage += 10;
+                    modifiers.FlatBonusDamage += 10;
                 }
             }
             if(!proj.npcProj && !proj.trap && !proj.minion && !ProjectileID.Sets.MinionShot[proj.type])
@@ -144,7 +144,7 @@ namespace Combinations
                 //reverse Tag from StardustCharm
                 if (target.HasBuff<StardustCharmBuff>())
                 {
-                    damage += 20;
+                    modifiers.FlatBonusDamage += 20;
                 }
                 //Solar Charm damage bonus
                 if (proj.DamageType == DamageClass.Melee && !ProjectileID.Sets.IsAWhip[proj.type] && Helpers.HasPlayerAccessoryEquipped<SolarCharm>(Player))
@@ -153,13 +153,13 @@ namespace Combinations
                     distance *= 0.0075f;
                     if(distance <= 1f)
                     {
-                        // 50% bonus
-                        damage = (int)(damage * 1.5f);
+                        // 50% 
+                        modifiers.SourceDamage *= 1.5f;
                     } else if(distance <= 50f)
                     {
                         // 50% -> 0% bonus
-                        float damage_bonus = damage / distance;
-                        damage += (int)damage_bonus;
+                        StatModifier damage_bonus = modifiers.SourceDamage / distance;
+                        modifiers.SourceDamage += damage_bonus.Base;
                     }
                 }
                 //Vortex Charm effects
@@ -287,13 +287,13 @@ namespace Combinations
                                 {
                                     target.buffTime[buff_index] = 960;
                                 }
-                                damage += 5;
+                                modifiers.FlatBonusDamage += 5;
                                 break;
                             }
                     }
                 }
             }
-            base.ModifyHitNPCWithProj(proj, target, ref damage, ref knockback, ref crit, ref hitDirection);
+            base.ModifyHitNPCWithProj(proj, target, ref modifiers);
         }
 
         public override void PreUpdate()
@@ -450,10 +450,10 @@ namespace Combinations
             base.CatchFish(attempt, ref itemDrop, ref npcSpawn, ref sonar, ref sonarPosition);
         }
 
-        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
+        public override void OnHurt(Player.HurtInfo info)
         {
             lastHurt = DateTime.Now;
-            base.Hurt(pvp, quiet, damage, hitDirection, crit, cooldownCounter);
+            base.OnHurt(info);
         }
     }
 }

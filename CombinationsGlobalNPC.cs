@@ -11,38 +11,21 @@ namespace Combinations
 {
     public sealed class CombinationsGlobalNPC : GlobalNPC
     {
-        public override bool StrikeNPC(NPC npc, ref double damage, int defense, ref float knockback, int hitDirection, ref bool crit)
+        public override void ModifyIncomingHit(NPC npc, ref NPC.HitModifiers modifiers)
         {
-            if(damage == 0.0)
-            {
-                return false;
-            }
             if(npc.HasBuff<HuntersMarkBuffOne>())
             {
-                defense -= 5;
+                modifiers.Defense -= 5;
             }
             if (npc.HasBuff<HuntersMarkBuffTwo>())
             {
-                defense -= 10;
+                modifiers.Defense -= 10;
             }
             if (npc.HasBuff<HuntersMarkBuffThree>() || npc.HasBuff<HuntersMarkBuffFour>())
             {
-                defense -= 15;
+                modifiers.Defense -= 15;
             }
-            if(defense < 0)
-            {
-                defense = 0;
-            }
-            damage = Main.CalculateDamageNPCsTake((int)damage, defense);
-            if (crit)
-            {
-                damage *= 2.0;
-            }
-            if (npc.takenDamageMultiplier > 1f)
-            {
-                damage *= npc.takenDamageMultiplier;
-            }
-            return false;
+            base.ModifyIncomingHit(npc, ref modifiers);
         }
 
         public override void PostDraw(NPC npc, SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)

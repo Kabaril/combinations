@@ -17,6 +17,11 @@ Mods: {
 					Tooltip: No more Vine Rope clogging up your Inventory!
 				}
 
+				EnableUnfinishedItems: {
+					Label: Enable unfinished items
+					Tooltip: Items that are not yet finished and need textures, balancing, etc.
+				}
+
 				DisplayName: Combinations Config
 			}
 		}
@@ -43,7 +48,7 @@ Mods: {
 					Turns the holder into a werewolf at night
 					If worn during the night, grants minor increase to damage, melee speed, critical strike chance,
 					life regeneration, defense, mining speed, and minion knockback
-					Grants immunity to Nightwither
+					Grants immunity to Moon Burnt
 					'''
 			}
 		}
@@ -377,6 +382,20 @@ Mods: {
 					'''
 			}
 
+			MOPPGear: {
+				DisplayName: MOPP Gear
+				Tooltip:
+					'''
+					Grants the ability to swim and greatly extends underwater breathing
+					Provides extra mobility on ice
+					Generates a very subtle glow which becomes more vibrant underwater
+					Grants immunity to most debuffs
+					Releases bees and douses the user in honey when damaged
+					Reduces damage from touching lava
+					Grants a recharging protective barrier
+					'''
+			}
+
 			NebulaCharm: {
 				DisplayName: Nebula Charm
 				Tooltip:
@@ -475,8 +494,5 @@ Mods: {
 					'''
 			}
 		}
-
-		HellBoots.Tooltip: Mods.Combinations.HellBoots.Tooltip
-		MoonTablet.Tooltip: Mods.Combinations.MoonTablet.Tooltip
 	}
 }

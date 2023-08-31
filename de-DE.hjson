@@ -1,0 +1,500 @@
+Mods: {
+	Combinations: {
+		Configs: {
+			CombinationsConfig: {
+				Headers: {
+					Visual: Visuell
+					Gameplay: Gameplay
+				}
+
+				HideMoltenShieldRing: {
+					Label: Geschmolzener Schild Inferno verstecken
+					Tooltip: Den Inferno Effekt des geschmolzenen Schilds verstecken
+				}
+
+				DisableVineRopeForBoots: {
+					Label: Deaktiviere Rankenseil aufsammeln von Stiefeln
+					Tooltip: Keine Rankenseile die dein Inventar verstopfen!
+				}
+
+				EnableUnfinishedItems: {
+					Label: Unfertige Items aktivieren
+					Tooltip: Noch nicht fertiggestellte Items mit fehlenden Texturen, Balancing, usw.
+				}
+
+				DisplayName: Combinations Konfiguration
+			}
+		}
+
+		Misc.MasterModeOnly: Nur Meister Modus
+
+		Interop: {
+			Calamity: {
+				HellBoots.Tooltip:
+					'''
+					Ermöglicht Flug
+					Ermöglicht das Gehen auf Wasser, Honig & Lava
+					Macht immun gegen Feuer-Blöcke und verleiht 7 Sekunden Immunität gegen Lava
+					Reduziert den Schaden beim Berühren von Lava
+					Hinterlässt eine Flammenspur
+					Wenn in der Unterwelt getragen: Schaden, Angriffsgeschwindigkeit,
+					kritische Trefferchance, Lebensregeneration und Verteidigung geringfügig erhöht
+					Immunität gegen Verbrennung und In Brand stehen!
+					Multipliziert allen auf Verbrennungsschaden basierenden Effektschaden um 1.5
+					Alle Angriffe lösen Höllenfeuer aus
+					'''
+				MoonTablet.Tooltip:
+					'''
+					Verwandelt den Besitzer nachts in einen Werwolf
+					Wenn in der Nacht getragen: Schaden, Nahkampftempo,
+					kritische Trefferchance, Lebensregeneration, Verteidigung,
+					Bergbautempo und Günstlingsrückstoß geringfügig erhöht
+					Immunität gegen Mondverbrannt
+					'''
+			}
+		}
+
+		Buffs: {
+			HuntersMarkBuffFour: {
+				DisplayName: Jagdzeichen
+				Description: Die Jagd beginnt
+			}
+
+			HuntersMarkBuffOne: {
+				DisplayName: Jagdzeichen
+				Description: Die Jagd beginnt
+			}
+
+			HuntersMarkBuffThree: {
+				DisplayName: Jagdzeichen
+				Description: Die Jagd beginnt
+			}
+
+			HuntersMarkBuffTwo: {
+				DisplayName: Jagdzeichen
+				Description: Die Jagd beginnt
+			}
+
+			MirrorNecklaceBuff: {
+				DisplayName: Spiegelzeichen
+				Description: Vom Spiegelamulett markiert
+			}
+
+			NebulaCharmBuff: {
+				DisplayName: Kosmische Macht
+				Description: Magische Kraft erhöht sich
+			}
+
+			StardustCharmBuff: {
+				DisplayName: Sternenstaubamulett
+				Description: Vom Sternenstaubamulett markiert
+			}
+		}
+
+		Items: {
+			AgletOfTheWind: {
+				DisplayName: Schnürsenkelkappe des Winds
+				Tooltip: Um 12% erhöhte Bewegungsgeschwindigkeit
+			}
+
+			ArchmagiLuminarium: {
+				DisplayName: Luminarium des Erzmagiers
+				Tooltip:
+					'''
+					Um 8% reduzierte Manakosten
+					Manatränke werden automatisch verbraucht, wenn nötig
+					Sorgt dafür, dass Sterne fallen, wenn du Schaden erleidest
+					Sterne stellen Mana wieder her, wenn du sie einsammelst
+					Erhöht Bewegungsgeschwindigkeit und Beschleunigung
+					Spendet Licht
+					'''
+			}
+
+			BandOfToughness: {
+				DisplayName: Amulett der Zähigkeit
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					'How tough are you?'
+					'''
+			}
+
+			BonePile: {
+				DisplayName: Knochenhaufen
+				Tooltip:
+					'''
+					Feuert Knochenkreuze auf Gegner ab, während du angreifst
+					Beschwört Schattenhände, die deine Gegner angreifen
+					'Du versuchst nicht an ihre Herkunft zu denken'
+					'''
+			}
+
+			BuildersPack: {
+				DisplayName: Handwerkerrucksack
+				Tooltip:
+					'''
+					Erhöht Abbautempo um 25%
+					Increases block & wall placement speed
+					Plazierte Gegenstände werden automatisch bemalt oder beschichtet
+					Erhöht Blockplazierungs- & Werkzeugreichweite um 4
+					Halte HOCH gedrückt, um höher zu kommen
+					'''
+			}
+
+			CharmOfEndurance: {
+				DisplayName: Amulett des Überdauerns
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					'''
+			}
+
+			CharmOfRangers: {
+				DisplayName: Amulett des Fernkämpfers
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 5% erhöhter Fernkampfschaden
+					Um 5% erhöhte kritische Trefferchance
+					'''
+			}
+
+			CharmOfSummoning: {
+				DisplayName: Amulett des Beschwörers
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Erhöht Günstlingsschaden um 5%
+					Erhöht Peitschengeschwindigkeit um 8%
+					'''
+			}
+
+			CharmOfThrowing: {
+				DisplayName: Amulett des Werfers
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 8% erhöhter Wurfschaden
+					Um 8% erhöhte kritische Trefferchance beim Werfen
+					Geworfene Gegenstände sind 20% schneller
+					'Die Zukunft ist ungewiss'
+					'''
+			}
+
+			CharmOfTrueFlight: {
+				DisplayName: Amulett des wahren Flugs
+				Tooltip:
+					'''
+					Ermöglicht unbegrenzten Flug
+					Erhöht Flug- und Sprungmobilität
+					'Fliegen ist wie atmen'
+					'''
+			}
+
+			CharmOfWarriors: {
+				DisplayName: Amulett des Kriegers
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 5% erhöhter Nahkampfschaden
+					'''
+			}
+
+			CharmOfWizards: {
+				DisplayName: Amulett des Zauberers
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Erhöht maximales Mana um 20
+					Um 5% erhöhter Magieschaden
+					'''
+			}
+
+			CloudOutOfBottle: {
+				DisplayName: Wolke
+				Tooltip: Ermöglicht dem Besitzer das Schweben
+			}
+
+			CrownOfLight: {
+				DisplayName: Krone des Lichts
+				Tooltip: ""
+			}
+
+			DeadlyEnviromentGear: {
+				DisplayName: Ausrüstung für tödliche Umgebungen
+				Tooltip:
+					'''
+					Befähigt zum Schwimmen un verleiht deutlich mehr Atemluft unter Wasser
+					Zusätzliche Beweglichkeit auf Eis
+					Erzeugt ein sanftes Leuchten, das unter Wasser stärker wird
+					Verleiht Immunität gegen Feuer-Blöcke, Gift, Bluten und Fallschaden
+					Setzt Bienen frei und tränkt den Benutzer bei erlittenem Schaden in Honig
+					Reduziert den Schaden beim Berühren von Lava
+					Verleiht dem Benutzer einen wiederaufladenden Schutzpanzer
+					'''
+			}
+
+			DruidTreads: {
+				DisplayName: Druidenstiefel
+				Tooltip:
+					'''
+					Ermöglicht Flug
+					Der Träger kann superschnell rennen
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Blumen wachsen auf dem Gras, auf dem du gehst
+					Vermindert nicht die Droprate, wenn Pflanzen zerstört werden
+					Erhöht die Alchemiepflanzensammlung
+					'''
+			}
+
+			GardeningBoots: {
+				DisplayName: Gartenschuhe
+				Tooltip:
+					'''
+					Ermöglicht Flug
+					Der Träger kann superschnell rennen
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Blumen wachsen auf dem Gras, auf dem du gehst
+					Vermindert nicht die Droprate, wenn Pflanzen zerstört werden
+					'''
+			}
+
+			GardeningKit: {
+				DisplayName: Gartenausrüstung
+				Tooltip:
+					'''
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Blumen wachsen auf dem Gras, auf dem du gehst
+					Vermindert nicht die Droprate, wenn Pflanzen zerstört werden
+					'Wo ist mein Gartenzwerg?'
+					'''
+			}
+
+			HazardousEnviromentGear: {
+				DisplayName: Schutzanzug für gefährliche Umweltbedingungen
+				Tooltip:
+					'''
+					Befähigt zum Schwimmen un verleiht deutlich mehr Atemluft unter Wasser
+					Zusätzliche Beweglichkeit auf Eis
+					Erzeugt ein sanftes Leuchten, das unter Wasser stärker wird
+					Macht immun gegen Feuer-Blöcke, Gift und Fallschaden
+					Setzt Bienen frei und tränkt den Benutzer bei erlittenem Schaden in Honig
+					'H.E.V. Gear'
+					'''
+			}
+
+			HellBoots: {
+				DisplayName: Höllenstiefel
+				Tooltip:
+					'''
+					Ermöglicht Flug
+					Ermöglicht das Gehen auf Wasser, Honig & Lava
+					Macht immun gegen Feuer-Blöcke und 7 Sekunden Immunität gegen Lava
+					Reduziert den Schaden beim Berühren von Lava
+					Hinterlässt eine Flammenspur
+					Wenn in der Unterwelt getragen: Schaden, Angriffsgeschwindigkeit,
+					kritische Trefferchance, Lebensregeneration und Verteidigung geringfügig erhöht
+					'''
+			}
+
+			HuntersMark: {
+				DisplayName: Jagdzeichen
+				Tooltip:
+					'''
+					Erhöht Einsammelreichweite bei Gegenständen
+					Markiert Gegner im Fernkampf
+					'Unerbittlich jagt er seine Beute'
+					'''
+			}
+
+			JungleBoots: {
+				DisplayName: Dschungelstiefel
+				Tooltip:
+					'''
+					Ermöglicht Flug
+					Der Träger kann superschnell rennen
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Blumen wachsen auf dem Gras, auf dem du gehst
+					Vermindert nicht die Droprate, wenn Pflanzen zerstört werden
+					Erhöht die Alchemiepflanzensammlung
+					Erhöht Lebenswiederherstellung und Manawiederherstellung
+					Beschwört Sporen, die den Feinden mit der Zeit Schaden zufügen
+					'''
+			}
+
+			MagicArrow: {
+				DisplayName: Magischer Pfeil
+				Tooltip:
+					'''
+					Flugdauer kann für Mana verlängert werden
+					'Flieg mit mir und sei frei'
+					'''
+			}
+
+			MasterThrowingCharm: {
+				DisplayName: Meisterwerferamulett
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 8% erhöhter Wurfschaden
+					Um 8% erhöhte kritische Trefferchance beim Werfen
+					Geworfene Gegenstände sind 20% schneller
+					Verdoppelt geworfene Gegenstände
+					'''
+			}
+
+			MirrorNecklace: {
+				DisplayName: Spiegelamulett
+				Tooltip:
+					'''
+					Erhöht die maximale Anzahl deiner Günstlinge um 1
+					Immun gegen Versteinerung
+					Erhöht den Synergieschaden durch Günstlinge
+					'''
+			}
+
+			MoltenShield: {
+				DisplayName: Geschmolzenes Schild
+				Tooltip:
+					'''
+					Nahkampfangriffe fügen Feuerschaden zu
+					Macht immun gegen Feuer-Blöcke
+					Reduziert den Schaden beim Berühren von Lava
+					Gewährt Immunität gegen Rückstoß
+					Setzt Gegner in der Nähe in Brand
+					'Jeder Höllenritter benötigt einen'
+					'''
+			}
+
+			MoonTablet: {
+				DisplayName: Mondtablett
+				Tooltip:
+					'''
+					Verwandelt den Besitzer nachts in einen Werwolf
+					Wenn in der Nacht getragen: Schaden, Nahkampftempo,
+					kritische Trefferchance, Lebensregeneration, Verteidigung,
+					Bergbautempo und Günstlingsrückstoß geringfügig erhöht
+					'''
+			}
+
+			MOPPGear: {
+				DisplayName: MOPP Ausrüstung
+				Tooltip:
+					'''
+					Befähigt zum Schwimmen un verleiht deutlich mehr Atemluft unter Wasser
+					Zusätzliche Beweglichkeit auf Eis
+					Erzeugt ein sanftes Leuchten, das unter Wasser stärker wird
+					Gibt dir Immunität für die meisten Schwächezauber
+					Setzt Bienen frei und tränkt den Benutzer bei erlittenem Schaden in Honig
+					Reduziert den Schaden beim Berühren von Lava
+					Verleiht dem Benutzer einen wiederaufladenden Schutzpanzer
+					'''
+			}
+
+			NebulaCharm: {
+				DisplayName: Nebula Amulett
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Erhöht maximales Mana um 20
+					Um 5% erhöhter Magieschaden
+					Gewährt einen schadensaufladenden Effekt
+					'''
+			}
+
+			OvergrownTreads: {
+				DisplayName: Überwachsene Schuhe
+				Tooltip:
+					'''
+					Ermöglicht Flug
+					Der Träger kann superschnell rennen
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Blumen wachsen auf dem Gras, auf dem du gehst
+					Vermindert nicht die Droprate, wenn Pflanzen zerstört werden
+					Erhöht die Alchemiepflanzensammlung
+					Erhöht Lebenswiederherstellung und Manawiederherstellung
+					'''
+			}
+
+			SlimeShield: {
+				DisplayName: Schleimschild
+				Tooltip:
+					'''
+					Schleime sind dir freundlich gesinnt
+					Ermöglicht es dem Spieler in den Gegner zu springen
+					Tippe doppelt in eine Richtung
+					'''
+			}
+
+			SolarCharm: {
+				DisplayName: Sonnenamulett
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					5% increased melee damage
+					Attacken verursachen Schaden basierend auf Nähe
+					'Komm einen Schritt näher'
+					'''
+			}
+
+			StardustCharm: {
+				DisplayName: Sternenstaubamulett
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Erhöht Günstlingsschaden um 5%
+					Erhöht Peitschengeschwindigkeit um 8%
+					Günstlingangriffe machen Gegner für dich verwundbar
+					'''
+			}
+
+			TubularMagiluminescence: {
+				DisplayName: Runde Magilumineszenz
+				Tooltip:
+					'''
+					Befähigt zum Treiben im Wasser
+					Erhöht Bewegungsgeschwindigkeit und Beschleunigung
+					Spendet Licht
+					'Wie genau schwimmt es?'
+					'''
+			}
+
+			UnholyAbomination: {
+				DisplayName: Unheiliges Ungetüm
+				Tooltip: Stark genug um Dämonenaltäre zu zerstören
+			}
+
+			VortexCharm: {
+				DisplayName: Vortex Amulett
+				Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 5% erhöhter Fernkampfschaden
+					Um 5% erhöhte kritische Trefferchance
+					Verursacht zufällige Effekte beim Angreifen von Feinden
+					'''
+			}
+
+			WildernessGuide: {
+				DisplayName: Naturführer
+				Tooltip:
+					'''
+					Ermöglicht die Sammlung von Rankenseilen von Ranken
+					Verhindert dass du Kleintieren Schaden zufügst, solange du dieses Item im Inventar ist
+					'Erklärt keine Naturkräfte'
+					'''
+			}
+		}
+	}
+}

@@ -23,6 +23,7 @@ using Combinations.Items.UnholyAbomination;
 using Combinations.Items.CloudOutOfBottle;
 using ReLogic.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Combinations.Items.MOPPGear;
 
 namespace Combinations
 {
@@ -391,7 +392,7 @@ namespace Combinations
             {
                 NebulaCharmCharge = 0;
             }
-            if (Helpers.HasPlayerAccessoryEquipped<DeadlyEnviromentGear>(Player))
+            if (Helpers.HasPlayerAccessoryEquipped<DeadlyEnviromentGear>(Player) || Helpers.HasPlayerAccessoryEquipped<MOPPGear>(Player))
             {
                 if (lastHurt < DateTime.Now.Subtract(TimeSpan.FromSeconds(5d)))
                 {

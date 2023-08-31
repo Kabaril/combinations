@@ -4,6 +4,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Combinations.Items.MOPPGear;
+using Combinations.Items.DeadlyEnviromentGear;
 
 namespace Combinations
 {
@@ -79,7 +81,19 @@ namespace Combinations
             recipe11.AddTile(TileID.TinkerersWorkbench);
             recipe11.Register();
 
+            if(CombinationsConfig.Instance.EnableUnfinishedItems) {
+                AddExperimentalRecipes();
+            }
+
             base.AddRecipes();
+        }
+
+        private void AddExperimentalRecipes() {
+            Recipe recipe = Recipe.Create(ModContent.ItemType<MOPPGear>());
+            recipe.AddIngredient<DeadlyEnviromentGear>();
+            recipe.AddIngredient(ItemID.AnkhShield);
+            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.Register();
         }
 
         public override void AddRecipeGroups()

@@ -19,5 +19,8 @@ namespace Combinations
 
         [DefaultValue(false)]
         public bool DisableVineRopeForBoots;
+
+        [DefaultValue(false)]
+        public bool EnableUnfinishedItems;
     }
 }

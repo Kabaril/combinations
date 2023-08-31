@@ -1,0 +1,494 @@
+Mods: {
+	Combinations: {
+		Configs: {
+			CombinationsConfig: {
+				Headers: {
+					Visual: 显示
+					Gameplay: 游戏
+				}
+
+				HideMoltenShieldRing: {
+					Label: 隐藏熔火护盾的狱火特效
+					Tooltip: 隐藏熔火护盾的狱火特效
+				}
+
+				DisableVineRopeForBoots: {
+					Label: 禁用靴子的葡萄藤收集
+					Tooltip: 不再有更多葡萄藤塞进背包里了
+				}
+
+				EnableUnfinishedItems: {
+					// Label: Enable unfinished items
+					// Tooltip: Items that are not yet finished and need textures, balancing, etc.
+				}
+
+				DisplayName: “更多组合”配置
+			}
+		}
+
+		Misc.MasterModeOnly: 仅大师模式
+
+		Interop: {
+			Calamity: {
+				HellBoots.Tooltip:
+					'''
+					可飞行
+					提供水上、蜂蜜和熔岩上移动能力
+					对火块免疫，七秒内对熔岩免疫
+					减少因触碰熔岩而受到的伤害
+					在你身后留下一串火焰痕迹
+					如果在地狱时佩戴，可略微提高伤害、攻击速度和暴击率、生命再生和防御力
+					免疫 "燃烧"和 "着火了！"减益
+					将所有基于火焰的减益伤害x1.5
+					所有攻击都会产生狱火
+					'''
+				MoonTablet.Tooltip:
+					'''
+					晚上将持有者变成狼人
+					夜晚，可小幅增加伤害、近战速度、暴击率、生命再生、防御力、采矿速度和仆从击退力
+					对夜魇免疫
+					'''
+			}
+		}
+
+		Buffs: {
+			HuntersMarkBuffFour: {
+				DisplayName: 猎人标记
+				Description: 猎杀时间到
+			}
+
+			HuntersMarkBuffOne: {
+				DisplayName: 猎人标记
+				Description: 猎杀时间到
+			}
+
+			HuntersMarkBuffThree: {
+				DisplayName: 猎人标记
+				Description: 猎杀时间到
+			}
+
+			HuntersMarkBuffTwo: {
+				DisplayName: 猎人标记
+				Description: 猎杀时间到
+			}
+
+			MirrorNecklaceBuff: {
+				DisplayName: 镜面打击
+				Description: 镜面项链标记
+			}
+
+			NebulaCharmBuff: {
+				DisplayName: 银河力量
+				Description: 魔法力量正在汇聚
+			}
+
+			StardustCharmBuff: {
+				DisplayName: 星尘护身符
+				Description: 星尘护身符标记
+			}
+		}
+
+		Items: {
+			AgletOfTheWind: {
+				DisplayName: 疾风带扣
+				Tooltip: 移动速度提高12%
+			}
+
+			ArchmagiLuminarium: {
+				DisplayName: 魔光斗篷
+				Tooltip:
+					'''
+					魔力值消耗减少8%
+					需要时自动使用魔力药水
+					受到伤害时会使星星坠落
+					收集后，星星会恢复魔力
+					提高移动速度和加速度
+					佩戴时可提供照明
+					'''
+			}
+
+			BandOfToughness: {
+				DisplayName: 坚韧手环
+				Tooltip:
+					'''
+					缓慢再生生命
+					'你有多硬？'
+					'''
+			}
+
+			BonePile: {
+				DisplayName: 骨堆
+				Tooltip:
+					'''
+					你发动攻击时向敌人发射交叉骨
+					召唤暗影之手来攻击你的敌人
+					'劝你不要细想他们的来源'
+					'''
+			}
+
+			BuildersPack: {
+				DisplayName: 建筑师背包
+				Tooltip:
+					'''
+					采矿速度提高25%
+					提高物块和墙的放置速度
+					自动喷涂和涂覆放置好的物块
+					物块放置和工具范围增加4
+					按住Up可以够到更高的地方
+					'''
+			}
+
+			CharmOfEndurance: {
+				DisplayName: 耐力护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					'''
+			}
+
+			CharmOfRangers: {
+				DisplayName: 远程护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					远程伤害提高5%
+					远程暴击率增加5%
+					'''
+			}
+
+			CharmOfSummoning: {
+				DisplayName: 召唤护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					召唤伤害提高5%
+					鞭子速度增加8%
+					'''
+			}
+
+			CharmOfThrowing: {
+				DisplayName: 投掷护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					投掷伤害提高8%
+					投掷暴击率增加8%
+					投掷速度增加20%
+					'前边的路看不清楚'
+					'''
+			}
+
+			CharmOfTrueFlight: {
+				DisplayName: 飞升护身符
+				Tooltip:
+					'''
+					提供无限飞行
+					提高飞行和跳跃能力
+					'飞行跟呼吸一样简单'
+					'''
+			}
+
+			CharmOfWarriors: {
+				DisplayName: 战士护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					近战伤害提高5%
+					'''
+			}
+
+			CharmOfWizards: {
+				DisplayName: 巫师护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					最大魔力值增加20
+					魔法伤害增加5%
+					'''
+			}
+
+			CloudOutOfBottle: {
+				DisplayName: 瓶外云
+				Tooltip: 可让持有者漂浮
+			}
+
+			CrownOfLight: {
+				DisplayName: 光之皇冠
+				Tooltip: ""
+			}
+
+			DeadlyEnviromentGear: {
+				DisplayName: 致命环境装备
+				Tooltip:
+					'''
+					可游泳并大大延长水下呼吸时间
+					额外提供冰上移动能力
+					发出非常微弱的光芒，这种光芒在水下会变得更醒目
+					免疫火块、毒药、流血和摔落伤害
+					受到伤害后释放蜜蜂，并将使用者浸入蜂蜜
+					减少因触碰熔岩而受到的伤害
+					在所有者周围放置可降低伤害的护罩
+					'''
+			}
+
+			DruidTreads: {
+				DisplayName: 德鲁伊之踏
+				Tooltip:
+					'''
+					可飞行
+					穿戴者可飞速奔跑
+					允许从葡萄藤收集藤蔓绳
+					你走过的草地上会生长花朵
+					破坏植物时不会降低掉率
+					可提高炼金植物收集速度
+					'''
+			}
+
+			GardeningBoots: {
+				DisplayName: 园艺靴
+				Tooltip:
+					'''
+					可飞行
+					穿戴者可飞速奔跑
+					允许从葡萄藤收集藤蔓绳
+					你走过的草地上会生长花朵
+					破坏植物时不会降低掉率
+					'''
+			}
+
+			GardeningKit: {
+				DisplayName: 园艺宝典
+				Tooltip:
+					'''
+					允许从葡萄藤收集藤蔓绳
+					你走过的草地上会生长花朵
+					破坏植物时不会降低掉率
+					'我把侏儒放哪儿了？'
+					'''
+			}
+
+			HazardousEnviromentGear: {
+				DisplayName: 危险环境装备
+				Tooltip:
+					'''
+					可游泳并大大延长水下呼吸时间
+					额外提供冰上移动能力
+					发出非常微弱的光芒，这种光芒在水下会变得更醒目
+					免疫火块、毒药和摔落伤害
+					受到伤害后释放蜜蜂，并将使用者浸入蜂蜜
+					'HEV防护服(出自游戏《半条命》)'
+					'''
+			}
+
+			HellBoots: {
+				DisplayName: 地狱靴
+				Tooltip:
+					'''
+					可飞行
+					提供水上、蜂蜜和熔岩上移动能力
+					对火块免疫，七秒内对熔岩免疫
+					减少因触碰熔岩而受到的伤害
+					在你身后留下一串火焰痕迹
+					如果在地狱时佩戴，可略微提高伤害、攻击速度和暴击率、生命再生和防御力
+					'''
+			}
+
+			HuntersMark: {
+				DisplayName: 猎人标记
+				Tooltip:
+					'''
+					物品的拾取范围增加
+					远程战斗时标记敌人
+					'他无情地追捕猎物'
+					'''
+			}
+
+			JungleBoots: {
+				DisplayName: 丛林靴
+				Tooltip:
+					'''
+					可飞行
+					穿戴者可飞速奔跑
+					允许从葡萄藤收集藤蔓绳
+					你走过的草地上会生长花朵
+					破坏植物时不会降低掉率
+					可提高炼金植物收集速度
+					提高生命和魔力再生
+					渐渐释放攻击敌人的孢子
+					'''
+			}
+
+			MagicArrow: {
+				DisplayName: 魔法箭
+				Tooltip:
+					'''
+					用魔力值换取更多飞行时间
+					'与我一起自由飞翔'
+					'''
+			}
+
+			MasterThrowingCharm: {
+				DisplayName: 投掷大师护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					投掷伤害提高8%
+					投掷暴击率增加8%
+					投掷速度增加20%
+					同时投掷两颗射弹
+					'''
+			}
+
+			MirrorNecklace: {
+				DisplayName: 镜面项链
+				Tooltip:
+					'''
+					最大仆从数量增加1个
+					石化免疫
+					提高召唤标记伤害
+					'''
+			}
+
+			MoltenShield: {
+				DisplayName: 熔火护盾
+				Tooltip:
+					'''
+					近战攻击造成火焰伤害
+					对火块免疫
+					减少接触熔岩造成的伤害
+					对击退免疫
+					点燃周围的敌人
+					'每个地狱骑士都得整一个'
+					'''
+			}
+
+			MoonTablet: {
+				DisplayName: 月亮碑牌
+				Tooltip:
+					'''
+					晚上将持有者变成狼人
+					夜晚，可小幅增加伤害、近战速度、暴击率、生命再生、防御力、采矿速度和仆从击退力
+					'''
+			}
+
+			MOPPGear: {
+				// DisplayName: MOPP Gear
+				/* Tooltip:
+					'''
+					Grants the ability to swim and greatly extends underwater breathing
+					Provides extra mobility on ice
+					Generates a very subtle glow which becomes more vibrant underwater
+					Grants immunity to most debuffs
+					Releases bees and douses the user in honey when damaged
+					Reduces damage from touching lava
+					Grants a recharging protective barrier
+					''' */
+			}
+
+			NebulaCharm: {
+				DisplayName: 星云护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					最大魔力值增加20
+					魔法伤害增加5%
+					给予伤害补充增益
+					'''
+			}
+
+			OvergrownTreads: {
+				DisplayName: 蔓生之踏
+				Tooltip:
+					'''
+					可飞行
+					穿戴者可飞速奔跑
+					允许从葡萄藤收集藤蔓绳
+					你走过的草地上会生长花朵
+					破坏植物时不会降低掉率
+					可提高炼金植物收集速度
+					提高生命和魔力再生
+					'''
+			}
+
+			SlimeShield: {
+				DisplayName: 史莱姆护盾
+				Tooltip:
+					'''
+					史莱姆变得友好了
+					允许玩家冲入敌人
+					双击一个方向
+					'''
+			}
+
+			SolarCharm: {
+				DisplayName: 日耀护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					近战伤害提高5%
+					根据距离造成更多伤害
+					'来靠近点'
+					'''
+			}
+
+			StardustCharm: {
+				DisplayName: 星尘护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					召唤伤害提高5%
+					鞭子速度增加8%
+					让目标不堪一击
+					'''
+			}
+
+			TubularMagiluminescence: {
+				DisplayName: 魔光浮游圈
+				Tooltip:
+					'''
+					可让人浮在水面
+					提高移动速度和加速度
+					佩戴时可提供照明
+					'这到底咋浮起来的?'
+					'''
+			}
+
+			UnholyAbomination: {
+				DisplayName: 邪恶憎恶
+				Tooltip: 强大到足以摧毁恶魔祭坛
+			}
+
+			VortexCharm: {
+				DisplayName: 星旋护身符
+				Tooltip:
+					'''
+					缓慢再生生命
+					治疗药水的冷却时间缩短25%
+					5% 远程伤害提高
+					5% 远程暴击率增加
+					攻击敌人时使用随机特效
+					'''
+			}
+
+			WildernessGuide: {
+				DisplayName: 旷野宝典
+				Tooltip:
+					'''
+					允许从葡萄藤收集藤蔓绳
+					放在背包里时无法伤害小动物
+					'无法解释大自然的力量'
+					'''
+			}
+		}
+	}
+}

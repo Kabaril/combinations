@@ -15,6 +15,15 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.33] - 2023-08-31
+### Added
+- Chinese translations (much thanks to @CJZZX)
+- German translations
+- Unfinished items system
+
+### Changed
+- Updated english localization
+
 ## [0.32] - 2023-08-01
 ### Fixed
 - tModLoader API Changes

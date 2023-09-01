@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.34] - 2023-09-01
+### Fixed
+- Slime Shield reforges no longer give melee modifiers
+
 ## [0.33] - 2023-08-31
 ### Added
 - Chinese translations (much thanks to @CJZZX)

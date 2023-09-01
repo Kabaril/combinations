@@ -2,6 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Utilities;
+using System.Collections.Generic;
 
 namespace Combinations.Items.SlimeShield
 {
@@ -17,6 +19,11 @@ namespace Combinations.Items.SlimeShield
             {
                 base_defense_value = eoc_shield.defense;
             }
+        }
+
+        public override bool MeleePrefix()
+        {
+            return false;
         }
 
         public override void SetDefaults()

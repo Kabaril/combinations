@@ -15,6 +15,10 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.35] - 2023-10-01
+### Fixed
+- tModLoader API Changes
+
 ## [0.34] - 2023-09-01
 ### Fixed
 - Slime Shield reforges no longer give melee modifiers

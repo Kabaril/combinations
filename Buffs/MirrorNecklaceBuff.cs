@@ -12,7 +12,7 @@ namespace Combinations.Buffs
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 			BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
-			BuffID.Sets.IsAnNPCWhipDebuff[Type] = true;
+			BuffID.Sets.IsATagBuff[Type] = true;
 		}
 	}
 }

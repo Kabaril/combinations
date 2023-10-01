@@ -333,7 +333,8 @@ namespace Combinations
 
         private void CloudOutOfBottleMovement(Player player)
         {
-            if (player.grappling[0] == -1 && !player.canJumpAgain_Cloud && !player.canJumpAgain_Sandstorm && !player.canJumpAgain_Blizzard && !player.canJumpAgain_Fart && !player.canJumpAgain_Sail && !player.canJumpAgain_Unicorn && !player.canJumpAgain_Santank && !player.canJumpAgain_WallOfFleshGoat && !player.canJumpAgain_Basilisk && player.jump == 0 && player.velocity.Y != 0f && player.rocketTime == 0 && player.wingTime == 0f && !player.mount.Active)
+            bool no_extra_jumps = player.ExtraJumps.ToArray().All(x => !x.Available);
+            if (player.grappling[0] == -1 && no_extra_jumps && player.jump == 0 && player.velocity.Y != 0f && player.rocketTime == 0 && player.wingTime == 0f && !player.mount.Active)
             {
                 if (player.controlJump)
                 {

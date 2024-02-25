@@ -51,6 +51,17 @@ Mods: {
 					Bergbautempo und Günstlingsrückstoß geringfügig erhöht
 					Immunität gegen Mondverbrannt
 					'''
+				CharmOfThrowing.Tooltip:
+					'''
+					Regeneriert langsam Leben
+					Reduziert die Abklingzeit von Heiltränken um 25%
+					Um 8% erhöhter Wurfschaden
+					Um 8% erhöhter Rogue Schaden
+					Um 8% erhöhte kritische Trefferchance beim Werfen
+					Um 8% erhöhte kritische Trefferchance für Rogues
+					Geworfene Gegenstände sind 20% schneller
+					'Die Zukunft ist ungewiss'
+					'''
 			}
 		}
 

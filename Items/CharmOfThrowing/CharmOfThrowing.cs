@@ -2,16 +2,29 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.Localization;
 
 namespace Combinations.Items.CharmOfThrowing
 {
     [AutoloadEquip(EquipType.HandsOn)]
     public sealed class CharmOfThrowing : CombinationsBaseModItem
     {
+        public override LocalizedText Tooltip {
+            get {
+                if(Helpers.IsCalamityActive()) {
+                    return Language.GetOrRegister("Mods.Combinations.Interop.Calamity.CharmOfThrowing.Tooltip");
+                }
+                return Language.GetOrRegister("Mods.Combinations.Items.CharmOfThrowing.Tooltip");
+            }
+        }
+
+        private static DamageClass rogueDamageClass = null;
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
+            rogueDamageClass = Helpers.GetCalamityRogueDamageClass();
         }
 
         public override void SetDefaults()
@@ -39,6 +52,11 @@ namespace Combinations.Items.CharmOfThrowing
         {
             player.pStone = true;
             player.GetCritChance(DamageClass.Throwing) += 8;
+            player.GetDamage(DamageClass.Throwing) *= 1.08f;
+            if(rogueDamageClass is not null) {
+                player.GetCritChance(rogueDamageClass) += 8;
+                player.GetDamage(rogueDamageClass) *= 1.08f;
+            }
         }
 
         public static int ItemType() => ModContent.ItemType<CharmOfThrowing>();

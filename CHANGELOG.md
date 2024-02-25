@@ -15,6 +15,13 @@ and this project partially adheres to [Semantic Versioning](https://semver.org/s
 
 ### Deprecated
 
+## [0.36] - 2024-02-24
+### Changed
+- Charm of Throwing and MasterThrowingCharm now also give Rogue Damage Bonuses if Calamity is active
+
+### Fixed
+- Charm of Throwing and MasterThrowingCharm Damage Bonuses are now reflected correctly in Weapon Tooltips
+
 ## [0.35] - 2023-10-01
 ### Fixed
 - tModLoader API Changes

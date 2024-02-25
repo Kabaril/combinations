@@ -50,6 +50,17 @@ Mods: {
 					life regeneration, defense, mining speed, and minion knockback
 					Grants immunity to Moon Burnt
 					'''
+				CharmOfThrowing.Tooltip:
+					'''
+					Slowly regenerates life
+					Reduces the cooldown of healing potions by 25%
+					8% increased throwing damage
+					8% increased rogue damage
+					8% increased throwing critical strike chance
+					8% increased rogue critical strike chance
+					20% increased throwing velocity
+					'The path ahead is unclear'
+					'''
 			}
 		}
 

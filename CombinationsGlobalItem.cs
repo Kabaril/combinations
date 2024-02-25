@@ -21,19 +21,27 @@ namespace Combinations
 
         public override void ModifyShootStats(Item item, Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if(item.DamageType == DamageClass.Throwing || (item.DamageType == DamageClass.Ranged && item.consumable) || (item.DamageType == DamageClass.Melee && item.consumable))
+            DamageClass rogue = Helpers.GetCalamityRogueDamageClass();
+            bool isRogueDamage = (rogue is not null) && item.DamageType == rogue;
+            if(item.DamageType == DamageClass.Throwing || isRogueDamage) {
+                if(Helpers.HasPlayerOneOfAccessoryEquipped(player, ThrowingBuffAccessories))
+                {
+                    velocity.X *= 1.2f;
+                    velocity.Y *= 1.2f;
+
+                    //return early to avoid applying buff twice in special cases
+                    base.ModifyShootStats(item, player, ref position, ref velocity, ref type, ref damage, ref knockback);
+                    return;
+                }
+            }
+            if(item.consumable && (item.DamageType == DamageClass.Ranged || item.DamageType == DamageClass.Melee))
             {
                 if(Helpers.HasPlayerOneOfAccessoryEquipped(player, ThrowingBuffAccessories))
                 {
                     velocity.X *= 1.2f;
                     velocity.Y *= 1.2f;
-                    damage = (int)(damage * 1.08d + 1d);
-
-                    if(item.DamageType != DamageClass.Throwing)
-                    {
-                        //just convert crit to damage in this case
-                        damage = (int)(damage * 1.08d + 1d);
-                    }
+                    //just convert crit to damage in this case
+                    damage = (int)(damage * 1.16d + 1d);
                 }
             }
             base.ModifyShootStats(item, player, ref position, ref velocity, ref type, ref damage, ref knockback);

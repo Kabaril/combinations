@@ -8,10 +8,13 @@ namespace Combinations.Items.MasterThrowingCharm
     [AutoloadEquip(EquipType.HandsOn)]
     public sealed class MasterThrowingCharm : CombinationsBaseModItem
     {
+        private static DamageClass rogueDamageClass = null;
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Helpers.AddAsymmetricEquipHidden(this, EquipType.HandsOn);
+            rogueDamageClass = Helpers.GetCalamityRogueDamageClass();
         }
 
         public override void SetDefaults()
@@ -39,6 +42,11 @@ namespace Combinations.Items.MasterThrowingCharm
         {
             player.pStone = true;
             player.GetCritChance(DamageClass.Throwing) += 8;
+            player.GetDamage(DamageClass.Throwing) *= 1.08f;
+            if(rogueDamageClass is not null) {
+                player.GetCritChance(rogueDamageClass) += 8;
+                player.GetDamage(rogueDamageClass) *= 1.08f;
+            }
         }
 
         public static int ItemType() => ModContent.ItemType<MasterThrowingCharm>();

@@ -15,6 +15,8 @@ namespace Combinations
             _Calamity_Mod_Player_Type = null;
             _Calamity_Mod_Player_Method = null;
             _asymmetricEquipsMod = null;
+            calamityRogueDamageClassScanned = false;
+            calamityRogueDamageClass = null;
         }
 
         public static bool HasPlayerItemInInventory(Player player, int type)
@@ -201,6 +203,30 @@ namespace Combinations
                 return true;
             }
             return false;
+        }
+
+        private static bool calamityRogueDamageClassScanned = false;
+        private static DamageClass calamityRogueDamageClass = null;
+        public static DamageClass GetCalamityRogueDamageClass() {
+            if(calamityRogueDamageClassScanned) {
+                return calamityRogueDamageClass;
+            }
+            Type calamity_player_type = GetCalamityModPlayer();
+            if(calamity_player_type is null)
+            {
+                calamityRogueDamageClassScanned = true;
+                return null;
+            }
+            try {
+                Type damageClassType = calamity_player_type.Assembly.GetType("CalamityMod.RogueDamageClass");
+                FieldInfo field = damageClassType.GetField("Instance", BindingFlags.Static | BindingFlags.NonPublic);
+                object value = field.GetValue(null);
+                calamityRogueDamageClass = (DamageClass)value;
+                calamityRogueDamageClassScanned = true;
+                return calamityRogueDamageClass;
+            } catch {}
+            calamityRogueDamageClassScanned = true;
+            return null;
         }
 
         public static object GetCalamityModPlayerInstance(Player player)
